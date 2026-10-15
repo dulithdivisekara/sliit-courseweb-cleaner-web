@@ -1,0 +1,58 @@
+{
+  "name": "sliit-courseweb-cleaner-web",
+  "version": "1.0.0",
+  "description": "Official modern landing page and showcase platform for SLIIT CourseWeb Cleaner browser extension.",
+  "private": true,
+  "type": "module",
+  "homepage": "https://sliit-courseweb-cleaner-web.pages.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dulithdivisekara/sliit-courseweb-cleaner-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dulithdivisekara/sliit-courseweb-cleaner-web/issues"
+  },
+  "author": "Dulith Divisekara <dulithmdivisekara@gmail.com> (https://dulith.me)",
+  "license": "MIT",
+  "keywords": [
+    "sliit",
+    "courseweb",
+    "moodle",
+    "courseweb-cleaner",
+    "chrome-extension",
+    "react",
+    "typescript",
+    "vite",
+    "tailwindcss",
+    "cloudflare-pages",
+    "landing-page",
+    "student-productivity"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "deploy": "wrangler pages deploy dist --project-name=sliit-courseweb-cleaner-web"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.16.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "prettier": "^3.5.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.7.2",
+    "vite": "^6.1.0",
+    "wrangler": "^4.151.0"
+  }
+}
