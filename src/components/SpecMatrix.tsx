@@ -110,44 +110,23 @@ export function SpecMatrix({
 
           {/* Right Comparison Area */}
           <div className="lg:col-span-8">
-            {/* MOBILE VIEW (md:hidden): Clean Mobile List Points */}
-            <div className="md:hidden rounded-2xl bg-white dark:bg-[#161F2B] border border-navy-900/10 dark:border-white/10 shadow-xs divide-y divide-navy-100/70 dark:divide-white/5 overflow-hidden theme-surface-transition">
-              {rows.map((r, i) => (
-                <div key={i} className="p-3.5 sm:p-4 flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200/80 dark:border-emerald-800/60 flex items-center justify-center shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 stroke-[2.5]" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-xs sm:text-sm font-bold text-navy-950 dark:text-white leading-snug">
-                      {r.label}
-                    </h3>
-                    <p className="text-[11px] sm:text-xs text-neutral-600 dark:text-neutral-300 mt-0.5 leading-relaxed">
-                      {r.noteCleaner}
-                    </p>
-                    <div className="flex items-center gap-2 mt-1.5 text-[10px] sm:text-[11px] text-neutral-500 dark:text-neutral-400">
-                      <span className="inline-flex items-center gap-1">
-                        {r.defaultCourseweb ? (
-                          <Check className="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                        ) : (
-                          <X className="w-3 h-3 text-red-500 dark:text-red-400 shrink-0" />
-                        )}
-                        <span>Default CourseWeb</span>
-                      </span>
-                      <span className="text-neutral-300 dark:text-neutral-700">
-                        &bull;
-                      </span>
-                      <span className="inline-flex items-center gap-1">
-                        {r.adBlocker ? (
-                          <Check className="w-3 h-3 text-amber-600 dark:text-amber-400 shrink-0" />
-                        ) : (
-                          <X className="w-3 h-3 text-red-500 dark:text-red-400 shrink-0" />
-                        )}
-                        <span>AdBlockers</span>
-                      </span>
+            {/* MOBILE VIEW (md:hidden): Clean Bullet Points */}
+            <div className="md:hidden rounded-2xl bg-white dark:bg-[#161F2B] border border-navy-900/10 dark:border-white/10 shadow-xs p-4 sm:p-5 theme-surface-transition">
+              <ul className="space-y-3.5">
+                {rows.map((r, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-navy-700 dark:bg-gold-400 mt-1.5 shrink-0" />
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-xs sm:text-sm font-bold text-navy-950 dark:text-white leading-snug">
+                        {r.label}
+                      </h3>
+                      <p className="text-[11px] sm:text-xs text-neutral-600 dark:text-neutral-300 mt-0.5 leading-relaxed">
+                        {r.noteCleaner}
+                      </p>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* TABLET & DESKTOP VIEW (hidden md:grid): Full 3-Column Comparison Matrix */}
