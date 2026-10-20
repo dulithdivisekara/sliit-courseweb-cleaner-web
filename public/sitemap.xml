@@ -13,6 +13,11 @@
       <image:caption>Visual overview and showcase for the SLIIT Courseweb Cleaner extension</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://courseweb-cleaner.dulith.me/favicon-192x192.png</image:loc>
+      <image:title>SLIIT Courseweb Cleaner Official Site Logo</image:title>
+      <image:caption>Official logo icon for SLIIT Courseweb Cleaner</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://courseweb-cleaner.dulith.me/assets/theme/hero-dark.webp</image:loc>
       <image:title>SLIIT CourseWeb Cleaned Dashboard in Dark Mode</image:title>
       <image:caption>Streamlined CourseWeb interface with active module filtering and dark mode</image:caption>

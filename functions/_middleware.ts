@@ -174,6 +174,12 @@ const ALLOWED_EXACT_ROUTES = new Set([
   "/sitemap.xml",
   "/llms.txt",
   "/favicon.ico",
+  "/favicon.svg",
+  "/favicon-48x48.png",
+  "/favicon-96x96.png",
+  "/favicon-192x192.png",
+  "/favicon-512x512.png",
+  "/apple-touch-icon.png",
   "/.well-known/security.txt",
 ]);
 
