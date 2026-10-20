@@ -172,11 +172,13 @@ const ALLOWED_EXACT_ROUTES = new Set([
   "/index.html",
   "/robots.txt",
   "/sitemap.xml",
+  "/llms.txt",
+  "/favicon.ico",
   "/.well-known/security.txt",
 ]);
 
 const ALLOWED_ASSET_ROUTE =
-  /^\/assets\/[a-zA-Z0-9._-]+\.(png|svg|js|css|ico|webp|jpg|jpeg|woff2)$/;
+  /^\/assets\/([a-zA-Z0-9_-]+\/)*[a-zA-Z0-9._-]+\.(png|svg|js|css|ico|webp|jpg|jpeg|woff2)$/;
 
 function applySecurityHeaders(headers: Headers, isStaticAsset = false): void {
   headers.set(
