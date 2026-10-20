@@ -257,6 +257,21 @@ export async function onRequest(context: EventContext): Promise<Response> {
     );
   }
 
+  // Canonical Domain Redirect: Redirect all *.pages.dev requests to primary custom domain
+  if (url.hostname.endsWith(".pages.dev")) {
+    const targetUrl = new URL(request.url);
+    targetUrl.hostname = "courseweb-cleaner.dulith.me";
+    targetUrl.protocol = "https:";
+    targetUrl.port = "";
+    return new Response(null, {
+      status: 301,
+      headers: {
+        Location: targetUrl.toString(),
+        "Cache-Control": "public, max-age=86400",
+      },
+    });
+  }
+
   // 2. Edge Rate Limit Check (Only applied to dynamic/document routes; static assets bypass to prevent browser burst throttling)
   const isStaticAsset = url.pathname.startsWith("/assets/");
   if (!isStaticAsset) {
