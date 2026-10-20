@@ -22,9 +22,9 @@ interface RateRecord {
 }
 
 const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute window
-const MAX_REQUESTS_PER_WINDOW = 120; // 120 req/min per IP for normal browsing
-const MAX_VIOLATIONS_BEFORE_BAN = 5; // 5 WAF/recon hits triggers penalty ban
-const PENALTY_BAN_DURATION_MS = 300_000; // 5 minute ban for active scanners
+const MAX_REQUESTS_PER_WINDOW = 600; // 600 req/min per IP for document navigations
+const MAX_VIOLATIONS_BEFORE_BAN = 30; // 30 offensive WAF hits triggers penalty ban
+const PENALTY_BAN_DURATION_MS = 30_000; // 30 second ban for active scanners
 const MAX_TRACKED_IPS = 5_000; // Memory bound against spoofed-IP exhaustion
 
 const MAX_URL_LENGTH = 2048;
@@ -233,19 +233,7 @@ export async function onRequest(context: EventContext): Promise<Response> {
   const now = Date.now();
   const clientIp = getClientIp(request);
 
-  // 1. Edge Rate Limit & Penalty Box Check
-  const rateCheck = checkRateLimit(clientIp, now);
-  if (!rateCheck.allowed) {
-    return jsonErrorResponse(
-      429,
-      "Too Many Requests",
-      "Rate limit exceeded. Please slow down and try again shortly.",
-      rateCheck.reason || "Rate-Limit-Exceeded",
-      { "Retry-After": String(rateCheck.retryAfterSec) },
-    );
-  }
-
-  // 2. Request URI Size Bounds Check (Prevents ReDoS & CPU Exhaustion DoS)
+  // 1. Request URI Size Bounds Check (Prevents ReDoS & CPU Exhaustion DoS)
   if (request.url.length > MAX_URL_LENGTH) {
     recordViolation(clientIp, now);
     return jsonErrorResponse(
@@ -267,6 +255,21 @@ export async function onRequest(context: EventContext): Promise<Response> {
       "Malformed request URL.",
       "Blocked-Malformed-URL",
     );
+  }
+
+  // 2. Edge Rate Limit Check (Only applied to dynamic/document routes; static assets bypass to prevent browser burst throttling)
+  const isStaticAsset = url.pathname.startsWith("/assets/");
+  if (!isStaticAsset) {
+    const rateCheck = checkRateLimit(clientIp, now);
+    if (!rateCheck.allowed) {
+      return jsonErrorResponse(
+        429,
+        "Too Many Requests",
+        "Rate limit exceeded. Please slow down and try again shortly.",
+        rateCheck.reason || "Rate-Limit-Exceeded",
+        { "Retry-After": String(rateCheck.retryAfterSec) },
+      );
+    }
   }
 
   if (
