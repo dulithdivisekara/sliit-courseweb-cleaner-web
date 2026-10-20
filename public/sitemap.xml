@@ -42,5 +42,10 @@
       <image:title>Browser Extension Control Popup</image:title>
       <image:caption>Quick management popup for toggling themes, Ghost Mode, and module filters</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://courseweb-cleaner.dulith.me/assets/theme/testimonial-kesaru.webp</image:loc>
+      <image:title>Kesaru S. Student Testimonial</image:title>
+      <image:caption>Undergraduate student testimonial for SLIIT Courseweb Cleaner</image:caption>
+    </image:image>
   </url>
 </urlset>

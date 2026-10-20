@@ -416,7 +416,7 @@ export default function App() {
               <div className="flex items-center gap-3 pt-1">
                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-navy-900/10 dark:border-white/10 shrink-0">
                   <img
-                    src="/assets/testimonial-student.webp"
+                    src="/assets/theme/testimonial-kesaru.webp"
                     alt="Kesaru S., Undergraduate, SLIIT"
                     width={48}
                     height={48}
