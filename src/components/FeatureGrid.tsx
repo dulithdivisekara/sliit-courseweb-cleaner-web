@@ -7,30 +7,38 @@ import {
   Lock,
 } from "lucide-react";
 
-export function FeatureGrid() {
+interface FeatureGridProps {
+  darkMode: boolean;
+}
+
+export function FeatureGrid({ darkMode }: FeatureGridProps) {
   const cards = [
     {
       title: "Smart First-Run Wizard",
       desc: "Automatically prompts you to pick your campus and batch on first login. Sets up your custom filters in under 10 seconds.",
-      image: "/assets/config-modal.png",
+      lightImage: "/assets/theme/wizard-light.webp",
+      darkImage: "/assets/theme/wizard-dark.webp",
       tag: "Zero Configuration",
     },
     {
       title: "Dedicated Preferences Panel",
-      desc: "Customize custom whitelist keywords, toggle dark mode, or fine-tune module visibility directly inside your CourseWeb interface.",
-      image: "/assets/settings-tab.png",
+      desc: "Customize custom whitelist keywords, toggle Ghost Mode, or fine-tune module visibility directly inside your CourseWeb interface.",
+      lightImage: "/assets/theme/config-light.webp",
+      darkImage: "/assets/theme/config-dark.webp",
       tag: "Full Control",
     },
     {
       title: "Floating Toolbar Control",
-      desc: "A neat floating icon sits on your screen, allowing you to access filter settings or switch themes without opening new tabs.",
-      image: "/assets/step5-settings-icon.png",
+      desc: "A neat floating icon sits on your screen alongside Ghost Mode filtered items, letting you open filter settings anytime.",
+      lightImage: "/assets/theme/floating-gear-light.webp",
+      darkImage: "/assets/theme/floating-gear-dark.webp",
       tag: "Instant Access",
     },
     {
       title: "Multi-Browser Management",
-      desc: "Native toolbar action popup lets you quickly toggle filtering on and off or check active rule versions.",
-      image: "/assets/manage-extension.png",
+      desc: "Native toolbar action popup lets you quickly toggle filtering on and off, switch themes, or update your campus and batch.",
+      lightImage: "/assets/theme/popup-light.webp",
+      darkImage: "/assets/theme/popup-dark.webp",
       tag: "Cross-Platform",
     },
   ];
@@ -88,21 +96,22 @@ export function FeatureGrid() {
           </p>
         </div>
 
-        {/* Visual Cards Grid: Compact horizontal cards on mobile, full vertical cards on tablet/PC */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-16">
+        {/* Visual Cards Grid: Full-width enlarged 4:3 cropped previews on every device (mobile, tablet, and desktop) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-10 sm:mb-16">
           {cards.map((c, i) => (
             <div
               key={i}
-              className="p-3.5 sm:p-4 rounded-[22px] sm:rounded-[26px] bg-white dark:bg-[#161F2B] border border-navy-900/10 dark:border-white/10 hover:border-gold-500/40 dark:hover:border-gold-500/40 shadow-xs hover:shadow-md transition-all duration-200 flex flex-row sm:flex-col items-center sm:items-stretch justify-between gap-3.5 sm:gap-0 group theme-surface-transition"
+              className="p-4 rounded-[22px] sm:rounded-[26px] bg-white dark:bg-[#161F2B] border border-navy-900/10 dark:border-white/10 hover:border-gold-500/40 dark:hover:border-gold-500/40 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col items-stretch justify-between group theme-surface-transition"
             >
-              {/* Thumbnail: Compact square/4:3 on mobile, full 4:3 banner on sm+ */}
-              <div className="w-24 h-24 sm:w-full sm:h-auto sm:aspect-[4/3] shrink-0 rounded-xl sm:rounded-2xl overflow-hidden bg-navy-50/70 dark:bg-[#0D131A] border border-navy-100/80 dark:border-white/10 p-1.5 sm:p-2 sm:mb-4 flex items-center justify-center">
+              {/* Cropped & Enlarged 4:3 Preview Banner: Clearly legible on mobile phones, tablets, and desktops */}
+              <div className="w-full aspect-[4/3] shrink-0 rounded-xl sm:rounded-2xl overflow-hidden bg-navy-50/70 dark:bg-[#0D131A] border border-navy-100/80 dark:border-white/10 mb-4 flex items-center justify-center">
                 <img
-                  src={c.image}
-                  alt={c.title}
-                  width={400}
-                  height={300}
-                  className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  src={darkMode ? c.darkImage : c.lightImage}
+                  alt={`${c.title} (${darkMode ? "Dark" : "Light"} Theme)`}
+                  width={640}
+                  height={480}
+                  decoding="async"
+                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
                   loading="lazy"
                 />
               </div>

@@ -4,12 +4,6 @@ import { AppIcon, TelegramIcon } from "./Icons";
 
 const NAV_LINKS = [
   {
-    href: "#interactive-demo",
-    id: "interactive-demo",
-    label: "Sandbox",
-    mobileLabel: "Interactive Sandbox",
-  },
-  {
     href: "#comparison-preview",
     id: "comparison-preview",
     label: "Comparison",

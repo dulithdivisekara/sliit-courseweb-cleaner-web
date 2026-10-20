@@ -130,7 +130,7 @@ export function SpecMatrix({
                     {r.noteCleaner}
                   </p>
                   <div className="grid grid-cols-2 gap-2 pt-2 border-t border-navy-100/80 dark:border-white/10 text-[11px]">
-                    <div className="flex items-center gap-1.5 text-neutral-500 dark:text-neutral-400">
+                    <div className="flex items-center gap-1.5 text-neutral-700 dark:text-neutral-300">
                       {r.defaultCourseweb ? (
                         <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                       ) : (
@@ -140,7 +140,7 @@ export function SpecMatrix({
                         Default: {r.defaultCourseweb ? "Supported" : "No"}
                       </span>
                     </div>
-                    <div className="flex items-center gap-1.5 text-neutral-500 dark:text-neutral-400">
+                    <div className="flex items-center gap-1.5 text-neutral-700 dark:text-neutral-300">
                       {r.adBlocker ? (
                         <Check className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
                       ) : (
@@ -167,7 +167,7 @@ export function SpecMatrix({
                   <span className="font-bold text-lg sm:text-xl text-navy-950 dark:text-white block">
                     Courseweb Cleaner
                   </span>
-                  <span className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5 block">
+                  <span className="text-xs text-neutral-700 dark:text-neutral-300 font-medium mt-0.5 block">
                     Specialized SLIIT Tool
                   </span>
                 </div>
@@ -183,7 +183,7 @@ export function SpecMatrix({
                           {r.label}
                         </span>
                       </div>
-                      <span className="text-[11px] text-neutral-500 dark:text-neutral-400 pl-7 leading-tight">
+                      <span className="text-[11px] text-neutral-700 dark:text-neutral-300 pl-7 leading-tight font-medium">
                         {r.noteCleaner}
                       </span>
                     </div>
@@ -197,7 +197,7 @@ export function SpecMatrix({
                   <span className="font-bold text-lg sm:text-xl text-neutral-700 dark:text-neutral-200 pt-5 block">
                     Default CourseWeb
                   </span>
-                  <span className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5 block">
+                  <span className="text-xs text-neutral-700 dark:text-neutral-300 font-medium mt-0.5 block">
                     Standard Moodle
                   </span>
                 </div>
@@ -210,7 +210,7 @@ export function SpecMatrix({
                           className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${
                             r.defaultCourseweb
                               ? "bg-navy-100 dark:bg-navy-900/70 text-navy-700 dark:text-gold-400"
-                              : "bg-neutral-200/70 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400"
+                              : "bg-neutral-200/70 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300"
                           }`}
                         >
                           {r.defaultCourseweb ? (
@@ -219,11 +219,11 @@ export function SpecMatrix({
                             <X className="w-3 h-3" />
                           )}
                         </div>
-                        <span className="text-xs sm:text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                        <span className="text-xs sm:text-sm font-medium text-neutral-800 dark:text-neutral-200">
                           {r.label}
                         </span>
                       </div>
-                      <span className="text-[11px] text-neutral-500 dark:text-neutral-400 pl-7 leading-tight">
+                      <span className="text-[11px] text-neutral-700 dark:text-neutral-300 pl-7 leading-tight font-medium">
                         {r.noteDefault}
                       </span>
                     </div>
@@ -237,7 +237,7 @@ export function SpecMatrix({
                   <span className="font-bold text-lg sm:text-xl text-neutral-700 dark:text-neutral-200 pt-5 block">
                     Generic Adblockers
                   </span>
-                  <span className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5 block">
+                  <span className="text-xs text-neutral-700 dark:text-neutral-300 font-medium mt-0.5 block">
                     uBlock / AdBlock
                   </span>
                 </div>
@@ -250,7 +250,7 @@ export function SpecMatrix({
                           className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${
                             r.adBlocker
                               ? "bg-navy-100 dark:bg-navy-900/70 text-navy-700 dark:text-gold-400"
-                              : "bg-neutral-200/70 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400"
+                              : "bg-neutral-200/70 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300"
                           }`}
                         >
                           {r.adBlocker ? (
@@ -259,11 +259,11 @@ export function SpecMatrix({
                             <X className="w-3 h-3" />
                           )}
                         </div>
-                        <span className="text-xs sm:text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                        <span className="text-xs sm:text-sm font-medium text-neutral-800 dark:text-neutral-200">
                           {r.label}
                         </span>
                       </div>
-                      <span className="text-[11px] text-neutral-500 dark:text-neutral-400 pl-7 leading-tight">
+                      <span className="text-[11px] text-neutral-700 dark:text-neutral-300 pl-7 leading-tight font-medium">
                         {r.noteAdblock}
                       </span>
                     </div>

@@ -76,7 +76,7 @@ export function FaqSection() {
                       className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
                         isOpen
                           ? "bg-navy-50 dark:bg-gold-500/15 rotate-180 text-navy-800 dark:text-gold-400"
-                          : "bg-neutral-100 dark:bg-[#0D131A] text-neutral-500 dark:text-neutral-400"
+                          : "bg-neutral-100 dark:bg-[#0D131A] text-neutral-600 dark:text-neutral-300"
                       }`}
                     >
                       <ChevronDown className="w-4 h-4" />

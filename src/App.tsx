@@ -1,12 +1,5 @@
-import { useState, useEffect } from "react";
-import {
-  ArrowUpRight,
-  Lock,
-  Layers,
-  Moon,
-  Filter,
-  Sparkles,
-} from "lucide-react";
+import { useState, useEffect, lazy, Suspense } from "react";
+import { ArrowUpRight, Lock, Layers, Moon, Filter } from "lucide-react";
 import {
   ChromeIcon,
   EdgeIcon,
@@ -16,13 +9,26 @@ import {
   AppIcon,
 } from "./components/Icons";
 import { Navbar } from "./components/Navbar";
-import { CampusSimulator } from "./components/CampusSimulator";
-import { ComparisonViewer } from "./components/ComparisonViewer";
 import { FeatureGrid } from "./components/FeatureGrid";
-import { SpecMatrix } from "./components/SpecMatrix";
 import { InstallSteps } from "./components/InstallSteps";
-import { FaqSection } from "./components/FaqSection";
 import { Footer } from "./components/Footer";
+
+// Lazy-load below-the-fold components to reduce initial JS payload & optimize TBT/LCP
+const ComparisonViewer = lazy(() =>
+  import("./components/ComparisonViewer").then((m) => ({
+    default: m.ComparisonViewer,
+  })),
+);
+const SpecMatrix = lazy(() =>
+  import("./components/SpecMatrix").then((m) => ({
+    default: m.SpecMatrix,
+  })),
+);
+const FaqSection = lazy(() =>
+  import("./components/FaqSection").then((m) => ({
+    default: m.FaqSection,
+  })),
+);
 
 function getInitialDarkMode(): boolean {
   if (typeof window === "undefined") return false;
@@ -124,7 +130,6 @@ export default function App() {
       shortLabel: "Chrome Web Store",
       url: "https://chromewebstore.google.com/detail/sliit-courseweb-cleaner/lnoadlfhebmkhmbfmehdgoffjllgadjm",
       icon: ChromeIcon,
-      badgeText: "Verified on Chrome Web Store",
     },
     edge: {
       name: "Edge",
@@ -132,7 +137,6 @@ export default function App() {
       shortLabel: "Edge Add-ons",
       url: "https://microsoftedge.microsoft.com/addons/detail/sliit-courseweb-cleaner/gmlodfhgiopjgamoijjffcmgfenkkkhe",
       icon: EdgeIcon,
-      badgeText: "Verified on Edge Add-ons Catalog",
     },
     firefox: {
       name: "Firefox",
@@ -140,7 +144,6 @@ export default function App() {
       shortLabel: "Firefox AMO",
       url: "https://addons.mozilla.org/en-US/firefox/addon/sliit-courseweb-cleaner/",
       icon: FirefoxIcon,
-      badgeText: "Verified on Firefox Add-ons (AMO)",
     },
   };
 
@@ -185,12 +188,10 @@ export default function App() {
       <main className="max-w-[1240px] mx-auto px-4 sm:px-6">
         {/* Hero Section */}
         <section className="pt-8 sm:pt-16 md:pt-20 pb-10 sm:pb-16 text-center">
-          {/* Top Context Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-[#161F2B] border border-navy-900/10 dark:border-white/10 text-navy-900 dark:text-gold-400 text-xs font-bold mb-6 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-gold-600 dark:text-gold-400 shrink-0" />
-            <span className="sm:hidden">Tailored for SLIIT Students</span>
-            <span className="hidden sm:inline">{currentStore.badgeText}</span>
-          </div>
+          {/* Top Context Subhead */}
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-navy-700 dark:text-gold-400 mb-4 sm:mb-6">
+            Install in Under 30 Seconds
+          </p>
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-6xl md:text-7xl font-bold tracking-tight text-navy-950 dark:text-white mb-5 sm:mb-6 max-w-4xl mx-auto leading-[1.12]">
@@ -221,18 +222,18 @@ export default function App() {
                 <ArrowUpRight className="w-4 h-4 text-gold-400 dark:text-navy-950 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0" />
               </a>
 
-              {/* Mobile Quick-Jump to Live Sandbox (Replaces multi-store desktop clutter on phones) */}
+              {/* Mobile Quick-Jump to Before & After Comparison */}
               <a
-                href="#interactive-demo"
+                href="#comparison-preview"
                 className="sm:hidden w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white dark:bg-[#161F2B] text-navy-950 dark:text-white text-sm font-bold border border-navy-900/15 dark:border-white/15 shadow-xs active:scale-95 transition-all"
               >
-                <span>Try Interactive Sandbox</span>
+                <span>See Before & After</span>
               </a>
             </div>
 
             {/* Desktop/Tablet Direct Links for Other Browsers & Userscript (Hidden on phones to keep mobile Hero clean) */}
-            <div className="hidden sm:flex flex-wrap items-center justify-center gap-3.5 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
-              <span className="font-medium text-neutral-500 dark:text-neutral-400">
+            <div className="hidden sm:flex flex-wrap items-center justify-center gap-3.5 text-xs text-neutral-700 dark:text-neutral-300 mt-1">
+              <span className="font-semibold text-neutral-700 dark:text-neutral-300">
                 Also available on:
               </span>
 
@@ -296,19 +297,35 @@ export default function App() {
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                 </div>
                 <span className="font-mono text-[11px] font-semibold text-navy-800 dark:text-neutral-300 truncate px-2">
-                  courseweb.sliit.lk — Courseweb Cleaner Active
+                  courseweb.sliit.lk | Courseweb Cleaner Active
                 </span>
                 <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-400 hidden sm:inline">
-                  Protected
+                  {darkMode ? "Dark Theme Active" : "Light Theme Active"}
                 </span>
               </div>
-              <div className="relative aspect-[16/9] overflow-hidden rounded-[12px] sm:rounded-[22px] bg-[#F8FAFD] dark:bg-neutral-900 border border-navy-900/5 dark:border-white/5">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-[12px] sm:rounded-[22px] bg-[#F8FAFD] dark:bg-[#0D131A] border border-navy-900/5 dark:border-white/5">
                 <img
-                  src="/assets/sliit-courseweb-cleaner-social-preview.png"
-                  alt="SLIIT Courseweb Cleaner Interface Mockup"
-                  width={1200}
-                  height={675}
-                  className="w-full h-full object-cover object-top"
+                  src={
+                    darkMode
+                      ? "/assets/theme/hero-dark-960.webp"
+                      : "/assets/theme/hero-light-960.webp"
+                  }
+                  srcSet={
+                    darkMode
+                      ? "/assets/theme/hero-dark-960.webp 960w, /assets/theme/hero-dark.webp 1465w"
+                      : "/assets/theme/hero-light-960.webp 960w, /assets/theme/hero-light.webp 1465w"
+                  }
+                  sizes="(max-width: 1024px) 100vw, 960px"
+                  alt={
+                    darkMode
+                      ? "SLIIT Courseweb Cleaner active in Dark Theme with Ghost Mode and extension popup"
+                      : "SLIIT Courseweb Cleaner active in Light Theme with Ghost Mode and extension popup"
+                  }
+                  width={960}
+                  height={540}
+                  fetchPriority="high"
+                  decoding="async"
+                  className="w-full h-full object-cover object-top transition-opacity duration-200"
                   loading="eager"
                 />
               </div>
@@ -317,7 +334,7 @@ export default function App() {
         </section>
 
         {/* Trust Highlights Bar: Compact 2x2 grid on mobile, 4-col bar on desktop */}
-        <section className="py-8 sm:py-10 border-y border-navy-900/10 dark:border-white/10 my-2 sm:my-4">
+        <section className="py-6 sm:py-8 my-2 sm:my-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {trustHighlights.map((item, idx) => {
               const IconComp = item.icon;
@@ -343,23 +360,29 @@ export default function App() {
           </div>
         </section>
 
-        {/* Interactive Campus Simulator Sandbox */}
-        <CampusSimulator
-          siteDarkMode={darkMode}
-          onSetSiteDarkMode={handleSetDarkMode}
-        />
-
         {/* Before and After Comparison Section */}
-        <ComparisonViewer />
+        <Suspense
+          fallback={
+            <div className="h-[420px] w-full rounded-[28px] bg-navy-50/60 dark:bg-[#121923] animate-pulse my-12" />
+          }
+        >
+          <ComparisonViewer darkMode={darkMode} />
+        </Suspense>
 
         {/* Key Features & Architecture Tour */}
-        <FeatureGrid />
+        <FeatureGrid darkMode={darkMode} />
 
         {/* Feature Comparison Specifications Matrix */}
-        <SpecMatrix
-          installUrl={currentStore.url}
-          installLabel={currentStore.label}
-        />
+        <Suspense
+          fallback={
+            <div className="h-[480px] w-full rounded-[28px] bg-navy-50/60 dark:bg-[#121923] animate-pulse my-12" />
+          }
+        >
+          <SpecMatrix
+            installUrl={currentStore.url}
+            installLabel={currentStore.label}
+          />
+        </Suspense>
 
         {/* Student Testimonial Quote */}
         <section className="py-12 sm:py-20 md:py-24 border-t border-navy-900/10 dark:border-white/10">
@@ -393,10 +416,11 @@ export default function App() {
               <div className="flex items-center gap-3 pt-1">
                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-navy-900/10 dark:border-white/10 shrink-0">
                   <img
-                    src="/assets/testimonial-student.png"
+                    src="/assets/testimonial-student.webp"
                     alt="Kesaru S., Undergraduate, SLIIT"
                     width={48}
                     height={48}
+                    decoding="async"
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
@@ -405,7 +429,7 @@ export default function App() {
                   <div className="font-bold text-sm sm:text-base text-navy-950 dark:text-white">
                     Kesaru S.
                   </div>
-                  <div className="text-xs font-medium text-neutral-500 dark:text-neutral-400">
+                  <div className="text-xs font-semibold text-neutral-700 dark:text-neutral-300">
                     Undergraduate, SLIIT
                   </div>
                 </div>
@@ -415,10 +439,16 @@ export default function App() {
         </section>
 
         {/* How It Works & Installation Steps */}
-        <InstallSteps />
+        <InstallSteps darkMode={darkMode} />
 
         {/* FAQ Section */}
-        <FaqSection />
+        <Suspense
+          fallback={
+            <div className="h-[360px] w-full rounded-[28px] bg-navy-50/60 dark:bg-[#121923] animate-pulse my-12" />
+          }
+        >
+          <FaqSection />
+        </Suspense>
 
         {/* Final CTA Banner (Visibly adapts between Light & Dark themes) */}
         <section

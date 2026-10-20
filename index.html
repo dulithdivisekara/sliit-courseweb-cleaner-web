@@ -25,18 +25,12 @@
     <meta name="theme-color" content="#F8FAFD" />
     <meta name="color-scheme" content="light dark" />
     <meta name="darkreader-lock" />
-    <link
-      rel="canonical"
-      href="https://sliit-courseweb-cleaner-web.pages.dev/"
-    />
+    <link rel="canonical" href="https://courseweb-cleaner.dulith.me/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="SLIIT Courseweb Cleaner" />
-    <meta
-      property="og:url"
-      content="https://sliit-courseweb-cleaner-web.pages.dev/"
-    />
+    <meta property="og:url" content="https://courseweb-cleaner.dulith.me/" />
     <meta
       property="og:title"
       content="SLIIT Courseweb Cleaner: Distraction-Free Moodle for SLIIT Students"
@@ -47,7 +41,7 @@
     />
     <meta
       property="og:image"
-      content="https://sliit-courseweb-cleaner-web.pages.dev/assets/sliit-courseweb-cleaner-social-preview.png"
+      content="https://courseweb-cleaner.dulith.me/assets/sliit-courseweb-cleaner-social-preview.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -55,10 +49,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:url"
-      content="https://sliit-courseweb-cleaner-web.pages.dev/"
-    />
+    <meta name="twitter:url" content="https://courseweb-cleaner.dulith.me/" />
     <meta
       name="twitter:title"
       content="SLIIT Courseweb Cleaner: Distraction-Free Moodle for SLIIT Students"
@@ -69,7 +60,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://sliit-courseweb-cleaner-web.pages.dev/assets/sliit-courseweb-cleaner-social-preview.png"
+      content="https://courseweb-cleaner.dulith.me/assets/sliit-courseweb-cleaner-social-preview.png"
     />
 
     <!-- Favicon & Touch Icons -->
@@ -93,12 +84,22 @@
     />
     <link rel="apple-touch-icon" href="/assets/icon_128.png" />
 
-    <!-- Fonts Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Self-Hosted Font Preload (Zero Render-Blocking Network Latency) -->
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="/assets/fonts/dm-sans-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Preload Hero LCP Image for Instant Discovery -->
+    <link
+      rel="preload"
+      href="/assets/theme/hero-light-960.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high"
     />
 
     <!-- Schema.org JSON-LD Structured Data Graph (SEO Starter Guide) -->
@@ -108,22 +109,22 @@
         "@graph": [
           {
             "@type": "WebSite",
-            "@id": "https://sliit-courseweb-cleaner-web.pages.dev/#website",
-            "url": "https://sliit-courseweb-cleaner-web.pages.dev/",
+            "@id": "https://courseweb-cleaner.dulith.me/#website",
+            "url": "https://courseweb-cleaner.dulith.me/",
             "name": "SLIIT Courseweb Cleaner",
             "description": "Distraction-free Moodle extension for SLIIT undergraduates.",
             "inLanguage": "en-US"
           },
           {
             "@type": "SoftwareApplication",
-            "@id": "https://sliit-courseweb-cleaner-web.pages.dev/#application",
+            "@id": "https://courseweb-cleaner.dulith.me/#application",
             "name": "SLIIT Courseweb Cleaner",
             "operatingSystem": "Windows, macOS, Linux, ChromeOS, Android",
             "applicationCategory": "BrowserApplication",
             "applicationSubCategory": "BrowserExtension",
             "genre": "Education, Productivity",
             "description": "A browser extension designed to optimize the SLIIT Moodle interface by filtering out irrelevant campus modules, batch announcements, and clutter.",
-            "image": "https://sliit-courseweb-cleaner-web.pages.dev/assets/sliit-courseweb-cleaner-social-preview.png",
+            "image": "https://courseweb-cleaner.dulith.me/assets/sliit-courseweb-cleaner-social-preview.png",
             "downloadUrl": "https://chromewebstore.google.com/detail/sliit-courseweb-cleaner/lnoadlfhebmkhmbfmehdgoffjllgadjm",
             "author": {
               "@type": "Person",
@@ -138,7 +139,7 @@
           },
           {
             "@type": "FAQPage",
-            "@id": "https://sliit-courseweb-cleaner-web.pages.dev/#faq",
+            "@id": "https://courseweb-cleaner.dulith.me/#faq",
             "mainEntity": [
               {
                 "@type": "Question",

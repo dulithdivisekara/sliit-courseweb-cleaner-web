@@ -1,0 +1,27 @@
+# SLIIT Courseweb Cleaner
+
+> Distraction-free Moodle browser extension for SLIIT undergraduates. Automatically filters irrelevant campus announcements, hides completed past-semester modules, and enables eye-friendly dark mode.
+
+SLIIT Courseweb Cleaner is a free, open-source, client-side browser utility built specifically for students at the Sri Lanka Institute of Information Technology (SLIIT). It operates on courseweb.sliit.lk to streamline academic productivity.
+
+## Core Capabilities
+
+- Campus Targeting: Automatically filters noticeboards and activity submission links intended for other campuses (supports Malabe, Metro, Kandy, Kurunegala, Matara, and Jaffna).
+- Batch and Group Isolation: Isolates weekday and weekend batch announcements so students only view their relevant groups.
+- Notice Protector: Built-in safety algorithm guarantees critical university notices, exam timetables, postponement notices, and lab reschedule alerts remain visible.
+- Past Semester Cleaner: Hides 40+ completed previous semester courses from the dashboard view.
+- Eye-Friendly Dark Mode: High-contrast dark theme powered by an embedded Dark Reader engine for late-night study sessions.
+- 100% Client-Side Privacy: Operates entirely offline inside the browser sandbox with zero tracking, zero external telemetry, and zero credentials collection.
+
+## Installation Options
+
+- [Chrome Web Store](https://chromewebstore.google.com/detail/sliit-courseweb-cleaner/lnoadlfhebmkhmbfmehdgoffjllgadjm): Official verified extension for Google Chrome, Brave, Arc, and Vivaldi.
+- [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/sliit-courseweb-cleaner/gmlodfhgiopjgamoijjffcmgfenkkkhe): Verified extension for Microsoft Edge.
+- [Mozilla Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/sliit-courseweb-cleaner/): Verified AMO add-on for Mozilla Firefox.
+- [Userscript Version](https://raw.githubusercontent.com/dulithdivisekara/sliit-courseweb-cleaner/main/dist/sliit-courseweb-cleaner.user.js): Standalone userscript for Tampermonkey and Violentmonkey on desktop and mobile browsers.
+
+## Links and Resources
+
+- [Official Website](https://courseweb-cleaner.dulith.me/): Live visual comparisons, feature tour, and setup guide.
+- [GitHub Repository](https://github.com/dulithdivisekara/sliit-courseweb-cleaner): Source code, issue tracker, and release changelogs under the MIT License.
+- [Userscript Guide](https://github.com/dulithdivisekara/sliit-courseweb-cleaner/blob/main/USERSCRIPT_INSTALL.md): Step-by-step setup guide for script managers.

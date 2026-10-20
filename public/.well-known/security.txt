@@ -5,6 +5,6 @@ Contact: mailto:dulithmdivisekara@gmail.com
 Contact: https://t.me/dulithdivisekara
 Expires: 2027-12-31T23:59:59.000Z
 Preferred-Languages: en
-Canonical: https://sliit-courseweb-cleaner-web.pages.dev/.well-known/security.txt
+Canonical: https://courseweb-cleaner.dulith.me/.well-known/security.txt
 Policy: https://github.com/dulithdivisekara/sliit-courseweb-cleaner/blob/main/privacy-policy.md
 Acknowledgments: https://github.com/dulithdivisekara/sliit-courseweb-cleaner/graphs/contributors

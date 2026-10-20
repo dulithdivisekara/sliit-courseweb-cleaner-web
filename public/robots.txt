@@ -18,4 +18,4 @@ Disallow: /
 User-agent: nessus
 Disallow: /
 
-Sitemap: https://sliit-courseweb-cleaner-web.pages.dev/sitemap.xml
+Sitemap: https://courseweb-cleaner.dulith.me/sitemap.xml

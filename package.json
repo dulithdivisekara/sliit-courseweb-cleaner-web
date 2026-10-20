@@ -4,7 +4,7 @@
   "description": "Official modern landing page and showcase platform for SLIIT CourseWeb Cleaner browser extension.",
   "private": true,
   "type": "module",
-  "homepage": "https://sliit-courseweb-cleaner-web.pages.dev",
+  "homepage": "https://courseweb-cleaner.dulith.me",
   "repository": {
     "type": "git",
     "url": "https://github.com/dulithdivisekara/sliit-courseweb-cleaner-web.git"

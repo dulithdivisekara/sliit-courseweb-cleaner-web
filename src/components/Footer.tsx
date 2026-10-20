@@ -23,7 +23,7 @@ export function Footer() {
               clutter, isolate campus announcements, and provide high-contrast
               dark mode on SLIIT CourseWeb.
             </p>
-            <div className="flex items-center gap-2 text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+            <div className="flex items-center gap-2 text-xs text-neutral-700 dark:text-neutral-300 mt-1">
               <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
               <span>
                 100% Client-Side Privacy: No user tracking or analytics.
@@ -37,12 +37,6 @@ export function Footer() {
               Navigation
             </h3>
             <div className="grid grid-cols-2 sm:flex sm:flex-col gap-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
-              <a
-                href="#interactive-demo"
-                className="hover:text-navy-900 dark:hover:text-gold-400 transition-colors"
-              >
-                Interactive Sandbox
-              </a>
               <a
                 href="#comparison-preview"
                 className="hover:text-navy-900 dark:hover:text-gold-400 transition-colors"
@@ -129,7 +123,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Credits & Copyright */}
-        <div className="border-t border-navy-900/10 dark:border-white/10 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-500 dark:text-neutral-400">
+        <div className="border-t border-navy-900/10 dark:border-white/10 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-700 dark:text-neutral-300">
           <div>
             &copy; {currentYear} SLIIT Courseweb Cleaner. Released under the MIT
             License.

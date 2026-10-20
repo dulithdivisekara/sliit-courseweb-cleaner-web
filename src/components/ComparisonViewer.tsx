@@ -8,7 +8,11 @@ import {
   Filter,
 } from "lucide-react";
 
-export function ComparisonViewer() {
+interface ComparisonViewerProps {
+  darkMode: boolean;
+}
+
+export function ComparisonViewer({ darkMode }: ComparisonViewerProps) {
   const [tab, setTab] = useState<"after" | "before">("after");
 
   const highlights = [
@@ -35,10 +39,7 @@ export function ComparisonViewer() {
   ];
 
   return (
-    <section
-      id="comparison-preview"
-      className="py-12 sm:py-20 md:py-24 border-t border-navy-900/10 dark:border-white/10"
-    >
+    <section id="comparison-preview" className="py-10 sm:py-16 md:py-20">
       <div className="max-w-[1240px] mx-auto">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 sm:mb-10 gap-5 sm:gap-6">
@@ -59,7 +60,7 @@ export function ComparisonViewer() {
           <div
             role="tablist"
             aria-label="Comparison view selector"
-            className="grid grid-cols-2 p-1.5 rounded-2xl bg-navy-100/80 dark:bg-[#161F2B] border border-navy-200/70 dark:border-white/10 w-full sm:w-auto sm:min-w-[460px] relative shadow-xs theme-surface-transition"
+            className="grid grid-cols-2 p-1.5 rounded-2xl bg-navy-100/80 dark:bg-[#161F2B] border border-navy-200/70 dark:border-white/10 w-full sm:w-auto sm:min-w-[380px] relative shadow-xs theme-surface-transition"
           >
             {/* Animated Sliding Active Background */}
             <span
@@ -83,10 +84,7 @@ export function ComparisonViewer() {
               }`}
             >
               <Eye className="w-4 h-4 shrink-0" />
-              <span className="sm:hidden">With Cleaner</span>
-              <span className="hidden sm:inline">
-                With Cleaner (Filtered & Dark)
-              </span>
+              <span>With Cleaner</span>
             </button>
 
             <button
@@ -101,10 +99,7 @@ export function ComparisonViewer() {
               }`}
             >
               <EyeOff className="w-4 h-4 shrink-0" />
-              <span className="sm:hidden">Default View</span>
-              <span className="hidden sm:inline">
-                Default (Unfiltered & Bright)
-              </span>
+              <span>Without Cleaner</span>
             </button>
           </div>
         </div>
@@ -138,19 +133,17 @@ export function ComparisonViewer() {
               {tab === "after" ? (
                 <span className="truncate">
                   <strong className="text-navy-800 dark:text-gold-400">
-                    Optimized:
+                    Optimized ({darkMode ? "Dark" : "Light"} Theme):
                   </strong>{" "}
                   <span className="hidden sm:inline">
-                    Filtered to registered batch with Dark Reader theme
+                    Filtered to registered batch with Ghost Mode active
                   </span>
-                  <span className="sm:hidden">
-                    Batch filtered + Dark Reader
-                  </span>
+                  <span className="sm:hidden">Batch filtered + Ghost Mode</span>
                 </span>
               ) : (
                 <span className="truncate">
                   <strong className="text-red-700 dark:text-red-300">
-                    Default Clutter:
+                    Without Cleaner:
                   </strong>{" "}
                   <span className="hidden sm:inline">
                     Unfiltered multi-campus announcements and 40+ past modules
@@ -168,19 +161,30 @@ export function ComparisonViewer() {
               onClick={() => setTab(tab === "after" ? "before" : "after")}
               className="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-white dark:bg-white/10 hover:bg-navy-50 dark:hover:bg-white/20 text-navy-950 dark:text-white border border-navy-900/10 dark:border-white/10 shrink-0 transition-colors cursor-pointer"
             >
-              {tab === "after" ? "Compare Default →" : "← Show Cleaned"}
+              {tab === "after" ? "Without Cleaner →" : "← With Cleaner"}
             </button>
           </div>
 
           {/* Stacked Smooth Cross-Fade Image Stage */}
           <div className="relative w-full aspect-[16/10] bg-[#F8FAFD] dark:bg-[#0D131A] overflow-hidden p-2 sm:p-4 transition-colors duration-300">
-            {/* After Image */}
+            {/* After Image (Theme-Reactive: switches between Light and Dark filtered views) */}
             <img
-              src="/assets/after.png"
-              alt="SLIIT CourseWeb after clean filtering and dark mode"
+              src={
+                darkMode
+                  ? "/assets/theme/after-dark-960.webp"
+                  : "/assets/theme/after-light-960.webp"
+              }
+              srcSet={
+                darkMode
+                  ? "/assets/theme/after-dark-960.webp 960w, /assets/theme/after-dark.webp 1465w"
+                  : "/assets/theme/after-light-960.webp 960w, /assets/theme/after-light.webp 1465w"
+              }
+              sizes="(max-width: 1024px) 100vw, 960px"
+              alt={`SLIIT CourseWeb after clean filtering in ${darkMode ? "dark" : "light"} mode`}
               width={960}
               height={600}
-              className={`w-full h-full object-contain rounded-xl sm:rounded-2xl bg-[#181a1b] shadow-md transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+              decoding="async"
+              className={`w-full h-full object-contain rounded-xl sm:rounded-2xl bg-white dark:bg-[#1c1e1f] shadow-md transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                 tab === "after"
                   ? "opacity-100 scale-100 relative z-10"
                   : "opacity-0 scale-[0.985] pointer-events-none absolute inset-0 z-0"
@@ -190,10 +194,13 @@ export function ComparisonViewer() {
 
             {/* Before Image */}
             <img
-              src="/assets/before.png"
+              src="/assets/theme/before-960.webp"
+              srcSet="/assets/theme/before-960.webp 960w, /assets/theme/before.webp 1190w"
+              sizes="(max-width: 1024px) 100vw, 960px"
               alt="SLIIT CourseWeb before clean filtering"
               width={960}
               height={600}
+              decoding="async"
               className={`w-full h-full object-contain rounded-xl sm:rounded-2xl bg-white shadow-md transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                 tab === "before"
                   ? "opacity-100 scale-100 relative z-10"
