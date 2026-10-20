@@ -139,7 +139,7 @@ const BLOCKED_PATH_PATTERNS = [
   /\/\.(?!well-known\/security\.txt$)[a-z0-9_-]+/i, // Block all other hidden dotfiles (.git, .env, .aws, .vscode, etc.)
   /\/(package(-lock)?\.json|tsconfig\.json|vite\.config\.ts|tailwind\.config\.js|postcss\.config\.js|wrangler\.toml|_middleware\.ts|_headers|_redirects)$/i,
   /\.(php|asp|aspx|jsp|cgi|env|bak|sql|swp|old|orig|log|ini|conf|sh|py|rb|map)$/i,
-  /\/(wp-admin|wp-login|wp-content|wp-includes|xmlrpc|phpmyadmin|pma|admin|administrator|actuator|server-status|cgi-bin|vendor|node_modules|functions|src)\b/i,
+  /^\/(wp-admin|wp-login|wp-content|wp-includes|xmlrpc|phpmyadmin|pma|admin|administrator|actuator|server-status|cgi-bin|vendor|node_modules|functions|src)(\/|$)/i,
 ];
 
 // Comprehensive WAF attack payload patterns (XSS, SQLi, SSTI, Log4Shell, Prototype Pollution, LFI, RCE, XXE)
@@ -353,16 +353,21 @@ export async function onRequest(context: EventContext): Promise<Response> {
   const decodedPath = decodedPathResult.value;
   const decodedQuery = decodedQueryResult.value;
 
+  const isAllowedExact = ALLOWED_EXACT_ROUTES.has(decodedPath);
+  const isAllowedAsset = ALLOWED_ASSET_ROUTE.test(decodedPath);
+
   // 7. Path Traversal, Sensitive Dotfile, and Config Probe Defense
-  for (const pattern of BLOCKED_PATH_PATTERNS) {
-    if (pattern.test(url.pathname) || pattern.test(decodedPath)) {
-      recordViolation(clientIp, now);
-      return jsonErrorResponse(
-        403,
-        "Forbidden",
-        "Request blocked by path security rules.",
-        "Blocked-Path-Traversal",
-      );
+  if (!isAllowedAsset) {
+    for (const pattern of BLOCKED_PATH_PATTERNS) {
+      if (pattern.test(url.pathname) || pattern.test(decodedPath)) {
+        recordViolation(clientIp, now);
+        return jsonErrorResponse(
+          403,
+          "Forbidden",
+          "Request blocked by path security rules.",
+          "Blocked-Path-Traversal",
+        );
+      }
     }
   }
 
@@ -384,9 +389,6 @@ export async function onRequest(context: EventContext): Promise<Response> {
   }
 
   // 9. Strict Route Allowlist (Prevents Soft-404 / Ghost-200 Enumeration)
-  const isAllowedExact = ALLOWED_EXACT_ROUTES.has(decodedPath);
-  const isAllowedAsset = ALLOWED_ASSET_ROUTE.test(decodedPath);
-
   if (!isAllowedExact && !isAllowedAsset) {
     return jsonErrorResponse(
       404,
