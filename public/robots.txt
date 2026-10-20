@@ -1,0 +1,21 @@
+# robots.txt for SLIIT Courseweb Cleaner Web
+User-agent: *
+Allow: /
+
+# Block automated red team fuzzers and vulnerability scanner bots from search crawling
+User-agent: sqlmap
+Disallow: /
+
+User-agent: nikto
+Disallow: /
+
+User-agent: dirbuster
+Disallow: /
+
+User-agent: wpscan
+Disallow: /
+
+User-agent: nessus
+Disallow: /
+
+Sitemap: https://sliit-courseweb-cleaner-web.pages.dev/sitemap.xml

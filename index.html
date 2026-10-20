@@ -18,15 +18,25 @@
     />
     <meta
       name="keywords"
-      content="SLIIT, Courseweb, SLIIT CourseWeb, Moodle, SLIIT Moodle Cleaner, SLIIT Extension, Student Productivity, Dark Mode Courseweb"
+      content="SLIIT, Courseweb, SLIIT CourseWeb, Moodle, SLIIT Moodle Cleaner, SLIIT Extension, Student Productivity, Dark Mode Courseweb, Malabe, Metro, Kandy, Matara, Kurunegala, Jaffna"
     />
     <meta name="author" content="Dulith Divisekara" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#3C513E" />
+    <meta name="theme-color" content="#F8FAFD" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="darkreader-lock" />
+    <link
+      rel="canonical"
+      href="https://sliit-courseweb-cleaner-web.pages.dev/"
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="SLIIT Courseweb Cleaner" />
+    <meta
+      property="og:url"
+      content="https://sliit-courseweb-cleaner-web.pages.dev/"
+    />
     <meta
       property="og:title"
       content="SLIIT Courseweb Cleaner: Distraction-Free Moodle for SLIIT Students"
@@ -37,12 +47,18 @@
     />
     <meta
       property="og:image"
-      content="/assets/sliit-courseweb-cleaner-social-preview.png"
+      content="https://sliit-courseweb-cleaner-web.pages.dev/assets/sliit-courseweb-cleaner-social-preview.png"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://sliit-courseweb-cleaner-web.pages.dev/"
+    />
     <meta
       name="twitter:title"
       content="SLIIT Courseweb Cleaner: Distraction-Free Moodle for SLIIT Students"
@@ -53,10 +69,16 @@
     />
     <meta
       name="twitter:image"
-      content="/assets/sliit-courseweb-cleaner-social-preview.png"
+      content="https://sliit-courseweb-cleaner-web.pages.dev/assets/sliit-courseweb-cleaner-social-preview.png"
     />
 
     <!-- Favicon & Touch Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/icon_16.png"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -79,28 +101,77 @@
       rel="stylesheet"
     />
 
-    <!-- Schema.org JSON-LD Structured Data -->
+    <!-- Schema.org JSON-LD Structured Data Graph (SEO Starter Guide) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "SLIIT Courseweb Cleaner",
-        "operatingSystem": "Windows, macOS, Linux, ChromeOS",
-        "applicationCategory": "BrowserApplication",
-        "applicationSubCategory": "BrowserExtension",
-        "genre": "Education, Productivity",
-        "description": "A browser extension designed to optimize the SLIIT Moodle (Courseweb) interface by filtering out irrelevant campus modules, batch announcements, and clutter.",
-        "image": "/assets/sliit-courseweb-cleaner-social-preview.png",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://sliit-courseweb-cleaner-web.pages.dev/#website",
+            "url": "https://sliit-courseweb-cleaner-web.pages.dev/",
+            "name": "SLIIT Courseweb Cleaner",
+            "description": "Distraction-free Moodle extension for SLIIT undergraduates.",
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://sliit-courseweb-cleaner-web.pages.dev/#application",
+            "name": "SLIIT Courseweb Cleaner",
+            "operatingSystem": "Windows, macOS, Linux, ChromeOS, Android",
+            "applicationCategory": "BrowserApplication",
+            "applicationSubCategory": "BrowserExtension",
+            "genre": "Education, Productivity",
+            "description": "A browser extension designed to optimize the SLIIT Moodle interface by filtering out irrelevant campus modules, batch announcements, and clutter.",
+            "image": "https://sliit-courseweb-cleaner-web.pages.dev/assets/sliit-courseweb-cleaner-social-preview.png",
+            "downloadUrl": "https://chromewebstore.google.com/detail/sliit-courseweb-cleaner/lnoadlfhebmkhmbfmehdgoffjllgadjm",
+            "author": {
+              "@type": "Person",
+              "name": "Dulith Divisekara",
+              "url": "https://dulith.me"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://sliit-courseweb-cleaner-web.pages.dev/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Will this extension hide my exam timetables or urgent faculty notices?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The extension features a built-in Notice Protector that guarantees critical university notices, including exam timetables, postponement notices, and lab reschedule alerts, always remain visible regardless of your campus filter settings."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does it support Chromium browsers like Brave, Arc, and Vivaldi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The extension is published on the official Chrome Web Store, making it directly compatible with Google Chrome, Brave, Arc, Vivaldi, and other Chromium-based browsers without extra configuration."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does the extension read my student login or personal academic data?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Never. The extension operates 100% client-side in your local browser sandbox with zero analytics trackers, zero telemetry, and never accesses your password, student ID, or submitted assignments."
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
   <body
-    class="bg-[#FBFBF9] text-neutral-900 font-sans antialiased selection:bg-sage-100 selection:text-neutral-900"
+    class="bg-[#F8FAFD] dark:bg-[#0D131A] text-neutral-900 dark:text-neutral-100 font-sans antialiased selection:bg-gold-500/25 selection:text-navy-950 dark:selection:bg-gold-400/30 dark:selection:text-gold-100"
   >
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

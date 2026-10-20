@@ -1,0 +1,35 @@
+# Cloudflare Pages Edge Security Headers (Defense-in-Depth)
+# Applied globally to all static routes
+/*
+  # Content Security Policy (Prevents XSS, Clickjacking, Code Injection, External Exfiltration)
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;
+
+  # HTTP Strict Transport Security (Prevents SSL Stripping & Man-In-The-Middle)
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+  # Prevent Clickjacking and Framing Attacks
+  X-Frame-Options: DENY
+
+  # Prevent MIME-Type Confusion & Executable Sniffing
+  X-Content-Type-Options: nosniff
+
+  # Referrer Policy (Prevents Internal URL and Query Param Leakage)
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Cross-Origin Isolation (Mitigates Spectre & Cross-Window DOM Exploits)
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+
+  # Restrict Adobe Flash / PDF Cross-Domain Policies & DNS Prefetching
+  X-Permitted-Cross-Domain-Policies: none
+  X-DNS-Prefetch-Control: off
+
+  # Permissions Policy (Locks Down Camera, Microphone, Geolocation, Payment APIs)
+  Permissions-Policy: accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), display-capture=(), document-domain=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), screen-wake-lock=(), usb=(), web-share=()
+
+  # Disable Legacy Buggy XSS Auditor
+  X-XSS-Protection: 0
+
+# Static asset aggressive caching with immutable fingerprinting
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

@@ -108,7 +108,7 @@ _Split layout: Left side contains numbered bullet points + CTA; right side conta
 - **Section Headline:** `[Everything you need in one clean extension]`
 - **Section Description:** `[Tailored specifically for SLIIT Moodle CourseWeb with zero setup required.]`
 - **Numbered Feature Points:**
-  - **01 - Title:** `[One-Click Installation:]` `[Install from the Chrome Web Store and refresh CourseWeb — that's it.]`
+  - **01 - Title:** `[One-Click Installation:]` `[Install from the Chrome Web Store and refresh CourseWeb - that's it.]`
   - **02 - Title:** `[Custom Module Aliases:]` `[Rename cryptic course codes like 'IT2030' to 'Software Architecture' for instant recognition.]`
   - **03 - Title:** `[Direct Lecture Notes Access:]` `[Quick-download weekly slides, lab sheets, and recordings without navigating deep folder trees.]`
   - **04 - Title:** `[Offline Cache Support:]` `[View your synced timetable and schedule even during campus Wi-Fi drops.]`
@@ -126,9 +126,9 @@ _3 responsive photo/interface cards highlighting the UX._
 
 - **Section Tag:** `[Interface]`
 - **Section Title:** `[Thoughtfully crafted for daily productivity.]`
-- **Card 1:** `[/assets/grid-card-1.png]` — `[Dashboard Quick View]`
-- **Card 2:** `[/assets/grid-card-2.png]` — `[Dark Mode in Action]`
-- **Card 3:** `[/assets/grid-card-3.png]` — `[Assignment Tracker & Alerts]`
+- **Card 1:** `[/assets/grid-card-1.png]` : `[Dashboard Quick View]`
+- **Card 2:** `[/assets/grid-card-2.png]` : `[Dark Mode in Action]`
+- **Card 3:** `[/assets/grid-card-3.png]` : `[Assignment Tracker & Alerts]`
 
 ---
 

@@ -2,16 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light;
+@layer base {
+  :root {
+    color-scheme: light;
+    --bg-primary: #f8fafd;
+    --text-primary: #0b1520;
+  }
+
+  html.dark {
+    color-scheme: dark;
+    --bg-primary: #0d131a;
+    --text-primary: #f1f5f9;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    transition:
+      background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+      color 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  }
 }
 
-html {
-  scroll-behavior: smooth;
+/* Smooth theme transition helper for interactive cards and surfaces */
+.theme-surface-transition {
+  transition:
+    background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  background-color: #fbfbf9;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

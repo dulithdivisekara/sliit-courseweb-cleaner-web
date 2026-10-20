@@ -1,0 +1,3 @@
+# Cloudflare Pages Edge Redirect & Routing Configuration
+# Canonical root mapping (unknown routes are strictly handled with 404 by functions/_middleware.ts)
+/index.html   /   301
