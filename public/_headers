@@ -33,3 +33,16 @@
 # Static asset aggressive caching with immutable fingerprinting
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Caching headers for SEO and crawler discovery files
+/sitemap.xml
+  Cache-Control: public, max-age=86400, stale-while-revalidate=43200
+  Content-Type: application/xml; charset=utf-8
+
+/robots.txt
+  Cache-Control: public, max-age=86400, stale-while-revalidate=43200
+  Content-Type: text/plain; charset=utf-8
+
+/llms.txt
+  Cache-Control: public, max-age=86400, stale-while-revalidate=43200
+  Content-Type: text/plain; charset=utf-8

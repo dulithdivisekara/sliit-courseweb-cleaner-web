@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://courseweb-cleaner.dulith.me/</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://courseweb-cleaner.dulith.me/assets/sliit-courseweb-cleaner-social-preview.png</image:loc>
+      <image:title>SLIIT Courseweb Cleaner: Distraction-Free Moodle Platform</image:title>
+      <image:caption>Visual overview and showcase for the SLIIT Courseweb Cleaner extension</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://courseweb-cleaner.dulith.me/assets/theme/hero-dark.webp</image:loc>
+      <image:title>SLIIT CourseWeb Cleaned Dashboard in Dark Mode</image:title>
+      <image:caption>Streamlined CourseWeb interface with active module filtering and dark mode</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://courseweb-cleaner.dulith.me/assets/theme/hero-light.webp</image:loc>
+      <image:title>SLIIT CourseWeb Cleaned Dashboard in Light Mode</image:title>
+      <image:caption>Clean light mode view of SLIIT CourseWeb without cross-campus announcement clutter</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://courseweb-cleaner.dulith.me/assets/theme/before.webp</image:loc>
+      <image:title>Unfiltered Default SLIIT CourseWeb Interface</image:title>
+      <image:caption>Default Moodle view displaying past semester clutter and irrelevant campus notices</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://courseweb-cleaner.dulith.me/assets/theme/wizard-dark.webp</image:loc>
+      <image:title>First-Run Setup Wizard on CourseWeb</image:title>
+      <image:caption>Automated setup wizard on courseweb.sliit.lk for campus and batch preference selection</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://courseweb-cleaner.dulith.me/assets/theme/config-dark.webp</image:loc>
+      <image:title>Campus Selection and Filtering Settings</image:title>
+      <image:caption>Configuration dialog supporting Malabe, Metro, Kandy, Matara, Kurunegala, and Jaffna</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://courseweb-cleaner.dulith.me/assets/theme/popup-dark.webp</image:loc>
+      <image:title>Browser Extension Control Popup</image:title>
+      <image:caption>Quick management popup for toggling themes, Ghost Mode, and module filters</image:caption>
+    </image:image>
   </url>
 </urlset>
