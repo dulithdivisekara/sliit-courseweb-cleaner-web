@@ -189,9 +189,9 @@ export default function App() {
         {/* Hero Section */}
         <section className="pt-8 sm:pt-16 md:pt-20 pb-10 sm:pb-16 text-center">
           {/* Top Context Subhead */}
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-navy-700 dark:text-gold-400 mb-4 sm:mb-6">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-navy-700 dark:text-gold-400 mb-2 sm:mb-3">
             Install in Under 30 Seconds
-          </p>
+          </span>
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-6xl md:text-7xl font-bold tracking-tight text-navy-950 dark:text-white mb-5 sm:mb-6 max-w-4xl mx-auto leading-[1.12]">

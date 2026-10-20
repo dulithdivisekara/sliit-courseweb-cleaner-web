@@ -110,44 +110,39 @@ export function SpecMatrix({
 
           {/* Right Comparison Area */}
           <div className="lg:col-span-8">
-            {/* MOBILE VIEW (md:hidden): Native Zero-Horizontal-Scroll Feature Cards */}
-            <div className="md:hidden flex flex-col gap-3">
+            {/* MOBILE VIEW (md:hidden): Clean Mobile List Points */}
+            <div className="md:hidden rounded-2xl bg-white dark:bg-[#161F2B] border border-navy-900/10 dark:border-white/10 shadow-xs divide-y divide-navy-100/70 dark:divide-white/5 overflow-hidden theme-surface-transition">
               {rows.map((r, i) => (
-                <div
-                  key={i}
-                  className="p-4 rounded-2xl bg-white dark:bg-[#161F2B] border border-navy-900/10 dark:border-white/10 shadow-xs flex flex-col gap-2.5 theme-surface-transition"
-                >
-                  <div className="flex items-start justify-between gap-2">
-                    <span className="text-sm font-bold text-navy-950 dark:text-white">
-                      {r.label}
-                    </span>
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 text-[11px] font-bold shrink-0">
-                      <Check className="w-3 h-3 stroke-[2.5]" />
-                      <span>Cleaner</span>
-                    </span>
+                <div key={i} className="p-3.5 sm:p-4 flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200/80 dark:border-emerald-800/60 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 stroke-[2.5]" />
                   </div>
-                  <p className="text-xs text-neutral-600 dark:text-neutral-300">
-                    {r.noteCleaner}
-                  </p>
-                  <div className="grid grid-cols-2 gap-2 pt-2 border-t border-navy-100/80 dark:border-white/10 text-[11px]">
-                    <div className="flex items-center gap-1.5 text-neutral-700 dark:text-neutral-300">
-                      {r.defaultCourseweb ? (
-                        <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                      ) : (
-                        <X className="w-3.5 h-3.5 text-red-500 dark:text-red-400 shrink-0" />
-                      )}
-                      <span className="truncate">
-                        Default: {r.defaultCourseweb ? "Supported" : "No"}
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xs sm:text-sm font-bold text-navy-950 dark:text-white leading-snug">
+                      {r.label}
+                    </h3>
+                    <p className="text-[11px] sm:text-xs text-neutral-600 dark:text-neutral-300 mt-0.5 leading-relaxed">
+                      {r.noteCleaner}
+                    </p>
+                    <div className="flex items-center gap-2 mt-1.5 text-[10px] sm:text-[11px] text-neutral-500 dark:text-neutral-400">
+                      <span className="inline-flex items-center gap-1">
+                        {r.defaultCourseweb ? (
+                          <Check className="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                        ) : (
+                          <X className="w-3 h-3 text-red-500 dark:text-red-400 shrink-0" />
+                        )}
+                        <span>Default CourseWeb</span>
                       </span>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-neutral-700 dark:text-neutral-300">
-                      {r.adBlocker ? (
-                        <Check className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
-                      ) : (
-                        <X className="w-3.5 h-3.5 text-red-500 dark:text-red-400 shrink-0" />
-                      )}
-                      <span className="truncate">
-                        AdBlock: {r.adBlocker ? "Manual" : "No"}
+                      <span className="text-neutral-300 dark:text-neutral-700">
+                        &bull;
+                      </span>
+                      <span className="inline-flex items-center gap-1">
+                        {r.adBlocker ? (
+                          <Check className="w-3 h-3 text-amber-600 dark:text-amber-400 shrink-0" />
+                        ) : (
+                          <X className="w-3 h-3 text-red-500 dark:text-red-400 shrink-0" />
+                        )}
+                        <span>AdBlockers</span>
                       </span>
                     </div>
                   </div>
