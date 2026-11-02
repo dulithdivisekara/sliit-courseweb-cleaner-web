@@ -1,292 +1,303 @@
-<div align="center">
+<p align="center">
+  <a href="https://courseweb-cleaner.dulith.me" target="_blank" rel="noopener noreferrer">
+    <img src="public/favicon-512x512.png" width="96" alt="SLIIT CourseWeb Cleaner Logo" />
+  </a>
+</p>
 
-  <img src="public/assets/icon_48.png" width="64" height="64" alt="SLIIT CourseWeb Cleaner Logo" />
+<h1 align="center">SLIIT CourseWeb Cleaner Web</h1>
 
-# SLIIT CourseWeb Cleaner: Web Platform
+<p align="center">
+  Official showcase portal and distribution platform for the SLIIT CourseWeb Cleaner browser extension.
+</p>
 
-**The official showcase portal and documentation site for the [SLIIT CourseWeb Cleaner](https://github.com/dulithdivisekara/sliit-courseweb-cleaner) browser extension.**
+<p align="center">
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5.7-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"></a>
+  <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-19.0-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React"></a>
+  <a href="https://vite.dev/"><img src="https://img.shields.io/badge/Vite-6.1-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite"></a>
+  <a href="https://pages.cloudflare.com/"><img src="https://img.shields.io/badge/Cloudflare_Pages-Edge-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare Pages"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="License"></a>
+</p>
 
-[![Version](https://img.shields.io/badge/Version-v7.1.0-0F3B5F?style=for-the-badge)](https://github.com/dulithdivisekara/sliit-courseweb-cleaner/blob/main/CHANGELOG.md)
-[![Domain](https://img.shields.io/badge/Domain-courseweb--cleaner.dulith.me-F7B924?style=for-the-badge&labelColor=0F3B5F)](https://courseweb-cleaner.dulith.me)
-[![Cloudflare Pages](https://img.shields.io/badge/Edge%20Platform-Cloudflare%20Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://courseweb-cleaner.dulith.me)
-[![React 19](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-6.1-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
-
-  <br />
-
-  <p align="center">
-    <a href="https://courseweb-cleaner.dulith.me"><strong>Explore Live Website</strong></a>
-    &nbsp;&bull;&nbsp;
-    <a href="https://github.com/dulithdivisekara/sliit-courseweb-cleaner"><strong>View Extension Repository</strong></a>
-    &nbsp;&bull;&nbsp;
-    <a href="https://courseweb.sliit.lk"><strong>SLIIT CourseWeb</strong></a>
-  </p>
-
-  <p align="center">
-    <a href="https://chromewebstore.google.com/detail/sliit-courseweb-cleaner/lnoadlfhebmkhmbfmehdgoffjllgadjm"><img src="https://img.shields.io/chrome-web-store/v/lnoadlfhebmkhmbfmehdgoffjllgadjm?label=Chrome%20Web%20Store&color=4285F4&logo=googlechrome&logoColor=white" alt="Chrome Web Store" /></a>
-    <a href="https://microsoftedge.microsoft.com/addons/detail/sliit-courseweb-cleaner/gmlodfhgiopjgamoijjffcmgfenkkkhe"><img src="https://img.shields.io/badge/Edge%20Add--ons-v7.1.0-0078D7?logo=microsoftedge&logoColor=white" alt="Edge Add-ons" /></a>
-    <a href="https://addons.mozilla.org/en-US/firefox/addon/sliit-courseweb-cleaner/"><img src="https://img.shields.io/amo/v/sliit-courseweb-cleaner?label=Firefox%20Add-ons&color=FF7139&logo=firefoxbrowser&logoColor=white" alt="Firefox Add-ons" /></a>
-    <a href="https://github.com/dulithdivisekara/sliit-courseweb-cleaner/blob/main/USERSCRIPT_INSTALL.md"><img src="https://img.shields.io/badge/Userscript-Tampermonkey-00485B?logo=tampermonkey&logoColor=white" alt="Userscript" /></a>
-  </p>
-
-</div>
-
----
-
-<div align="center">
-  <img src="public/assets/theme/hero-dark.webp" alt="SLIIT CourseWeb Cleaner Interface Showcase" width="900" style="border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.25);" />
-</div>
+<p align="center">
+  <a href="#overview">Overview</a> &bull;
+  <a href="#architecture--modes">Architecture</a> &bull;
+  <a href="#interface-comparison">Comparison</a> &bull;
+  <a href="#project-structure">Structure</a> &bull;
+  <a href="#installation">Installation</a> &bull;
+  <a href="#usage">Usage</a> &bull;
+  <a href="#verification-tests">Testing</a> &bull;
+  <a href="#edge-security--hardening">Security</a> &bull;
+  <a href="#license">License</a>
+</p>
 
 ---
 
 ## Overview
 
-**SLIIT CourseWeb Cleaner Web** is the official showcase portal and distribution platform for the **SLIIT CourseWeb Cleaner** browser extension.
+SLIIT CourseWeb Cleaner Web is the official showcase portal and distribution website for the [SLIIT CourseWeb Cleaner](https://github.com/dulithdivisekara/sliit-courseweb-cleaner) browser extension. Designed for students at the Sri Lanka Institute of Information Technology (SLIIT), the web application demonstrates how the companion extension streamlines Moodle by eliminating visual noise, introducing native dark mode, preserving academic notices, and customizing course navigation by campus and academic intake.
 
-Built specifically for students at the Sri Lanka Institute of Information Technology (SLIIT), the web application delivers a responsive, privacy-first interface featuring:
+The web platform serves as an interactive product tour, cross-browser installation router, and technical documentation hub. Visitors can preview side-by-side interface transformations, verify security guardrails, and receive direct browser-specific routing for Google Chrome, Brave, Arc, Microsoft Edge, and Mozilla Firefox.
 
-- **Interactive Before and After Comparison**: Visual demonstration contrasting standard Moodle clutter against the clean, focused CourseWeb layout with dark mode support.
-- **Dynamic Browser Detection**: Automatic user-agent routing for Google Chrome, Brave, Arc, Microsoft Edge, and Mozilla Firefox with direct store links.
-- **Onboarding Walkthrough**: Step-by-step visual guide detailing store installation, setup wizard configuration, campus selection, and floating settings controls.
-- **Notice Protector Verification**: Explains how critical exam timetables, postponement notices, and lab reschedule alerts are safeguarded.
-- **Red-Team Hardened Edge Architecture**: Cloudflare Pages Functions middleware with multi-pass decoding, URI path validation, IP rate limiting, crawler filtering, and strict HTTP security headers.
+Deployed on Cloudflare Pages, the platform incorporates edge middleware functions that deliver sub-50ms response times, automated DDoS mitigation, multi-pass URI decoding, and strict HTTP security headers.
+
+<p align="center">
+  <img src="public/assets/theme/hero-dark.webp" alt="SLIIT CourseWeb Cleaner Interface Showcase" width="880" />
+</p>
+
+---
+
+## Architecture & Modes
+
+The project operates across two execution environments: local client-side development via Vite and production edge delivery backed by Cloudflare Pages Functions.
+
+| Characteristic      | Local Development                      | Production Edge                                                    |
+| :------------------ | :------------------------------------- | :----------------------------------------------------------------- |
+| **Runtime**         | Node.js v18+ / Vite 6 Dev Server       | Cloudflare Pages Global Edge Network                               |
+| **Middleware**      | Vite internal dev server               | `functions/_middleware.ts` (V8 Edge Workers)                       |
+| **Asset Delivery**  | Native ESM with Hot Module Replacement | Pre-compressed static bundle (gzip/Brotli) via Cloudflare CDN      |
+| **Security Layer**  | Local loopback isolation               | Bounded rate limiting, scanner blocking, multi-pass URI validation |
+| **Request Latency** | ~5-15 ms (localhost)                   | <50 ms global edge response                                        |
+| **Output Target**   | In-memory compilation                  | Pre-rendered static single-page application (`dist/`)              |
+
+```mermaid
+graph TD
+    Client[Client Browser] -->|HTTPS Request| CFEdge[Cloudflare Edge Network]
+
+    subgraph Edge Security Middleware ["functions/_middleware.ts"]
+        CFEdge --> RateLimiter[Rate Limiter & IP Tracking]
+        RateLimiter -->|Pass| ScannerCheck[Scanner & User-Agent Filter]
+        ScannerCheck -->|Pass| URIDecoder[Multi-Pass URI & Traversal Sanitizer]
+        URIDecoder -->|Pass| RouteCheck[Strict Route Allowlist]
+        RouteCheck -->|Valid| SecurityHeaders[Security Headers Injection]
+    end
+
+    SecurityHeaders --> StaticAssets[Static Production Bundle]
+
+    subgraph Frontend Application ["React 19 SPA"]
+        StaticAssets --> ReactApp[React 19 Root Container]
+        ReactApp --> UADetect[Browser Detection Engine]
+        ReactApp --> Compare[Comparison Viewer]
+        ReactApp --> Guide[Installation Guide]
+        ReactApp --> Matrix[Feature Specification Matrix]
+    end
+
+    RateLimiter -->|Rate Exceeded| Block429[429 Too Many Requests]
+    ScannerCheck -->|Malicious Agent| Block403[403 Forbidden]
+    URIDecoder -->|Path Traversal| Block400[400 Bad Request]
+    RouteCheck -->|Unknown Path| Block404[404 Not Found]
+```
 
 ---
 
 ## Interface Comparison
 
-<table>
-  <tr>
-    <td width="50%" align="center">
-      <strong>Without Cleaner (Default Clutter)</strong><br />
-      <img src="public/assets/theme/before.webp" alt="CourseWeb Without Cleaner" width="440" />
-    </td>
-    <td width="50%" align="center">
-      <strong>With Cleaner (Optimized Interface)</strong><br />
-      <img src="public/assets/theme/after-dark.webp" alt="CourseWeb With Cleaner Dark Mode" width="440" />
-    </td>
-  </tr>
-</table>
-
----
-
-## Quick Setup Walkthrough
-
-<table>
-  <tr>
-    <td width="25%" align="center">
-      <strong>01. Add to Browser</strong><br />
-      <img src="public/assets/theme/step1-install.webp" alt="Step 1: Install from Web Store" width="220" />
-    </td>
-    <td width="25%" align="center">
-      <strong>02. Open CourseWeb</strong><br />
-      <img src="public/assets/theme/wizard-dark.webp" alt="Step 2: Setup Wizard" width="220" />
-    </td>
-    <td width="25%" align="center">
-      <strong>03. Configure Campus</strong><br />
-      <img src="public/assets/theme/config-dark.webp" alt="Step 3: Choose Campus & Batch" width="220" />
-    </td>
-    <td width="25%" align="center">
-      <strong>04. Manage Anytime</strong><br />
-      <img src="public/assets/theme/popup-dark.webp" alt="Step 4: Extension Popup" width="220" />
-    </td>
-  </tr>
-</table>
-
----
-
-## Key Features
-
-| Feature                          | Description                                                                                             |
-| :------------------------------- | :------------------------------------------------------------------------------------------------------ |
-| **Interactive Before and After** | Side-by-side comparison illustrating filtered vs unfiltered states across light and dark themes.        |
-| **Dynamic Browser Detection**    | User-agent inspection routes visitors to the matching store listing for Chrome, Edge, or Firefox.       |
-| **Specification Matrix**         | Detailed comparison analyzing CourseWeb Cleaner against standard Moodle and generic ad-blockers.        |
-| **Self-Hosted Variable Fonts**   | Self-hosted DM Sans font files in WOFF2 format to eliminate external font render-blocking latency.      |
-| **Adaptive Theme Sync**          | Full light and dark mode system with automatic OS preference sync and manual override persistence.      |
-| **Structured Data & SEO**        | Comprehensive OpenGraph cards, Twitter cards, JSON-LD schemas, sitemap, and `llms.txt` for AI crawlers. |
-| **Edge Defense Middleware**      | In-depth request inspection, bounded memory rate limiting, traversal defense, and security headers.     |
-
----
-
-## Tech Stack and Architecture
-
-- **Framework**: [React 19](https://react.dev/) with [TypeScript 5.7](https://www.typescriptlang.org/)
-- **Build Tool**: [Vite 6](https://vite.dev/)
-- **Styling**: [Tailwind CSS 3.4](https://tailwindcss.com/) with PostCSS and Autoprefixer
-- **Icons**: [Lucide React](https://lucide.dev/) and vector SVGs
-- **Edge Runtime**: [Cloudflare Pages](https://pages.cloudflare.com/) with Pages Functions
-- **Fonts**: Self-hosted DM Sans variable fonts (WOFF2)
-- **CI / CD**: Automated GitHub Actions workflow and Cloudflare Pages git integration
+|                                 Default Moodle Interface                                  |                                     CourseWeb Cleaner Dark Mode                                      |
+| :---------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
+| <img src="public/assets/theme/before.webp" alt="CourseWeb Without Cleaner" width="440" /> | <img src="public/assets/theme/after-dark.webp" alt="CourseWeb With Cleaner Dark Mode" width="440" /> |
+|           Standard cluttered layout with redundant sidebars and poor contrast.            |         Focused interface with dark palette, streamlined navigation, and preserved notices.          |
 
 ---
 
 ## Project Structure
 
-```plaintext
-sliit-courseweb-cleaner-web/
+```
+.
 ├── .github/
 │   └── workflows/
-│       └── ci.yml               # GitHub Actions CI workflow (build & format checks)
+│       └── ci.yml               # Automated CI workflow (build and format checks)
 ├── functions/
-│   └── _middleware.ts           # Cloudflare Pages edge security middleware (WAF, rate limits, headers)
-├── public/                      # Static production assets
-│   ├── _headers                 # Cloudflare Pages security & caching headers
+│   └── _middleware.ts           # Cloudflare Pages edge middleware (WAF, rate limiting, security headers)
+├── public/
 │   ├── .well-known/
 │   │   └── security.txt         # RFC 9116 security policy and disclosure contacts
 │   ├── assets/
 │   │   ├── fonts/               # Self-hosted DM Sans variable WOFF2 fonts
-│   │   ├── theme/               # Optimized WebP screenshots (hero, before/after, steps)
-│   │   └── icon_*.png           # Extension brand icons
-│   ├── llms.txt                 # Structured documentation for AI user agents
-│   ├── robots.txt               # Crawler instructions and scanner bot blocking
-│   └── sitemap.xml              # Search engine index sitemap
+│   │   ├── theme/               # Optimized WebP interface screenshots
+│   │   └── icon_*.png           # Extension brand icons (16px, 48px, 128px)
+│   ├── _headers                 # Cloudflare Pages HTTP security and caching headers
+│   ├── _redirects               # Edge routing and canonical redirect rules
+│   ├── favicon-512x512.png      # High-resolution raster brand mark
+│   ├── llms.txt                 # Structured context for AI user agents
+│   ├── robots.txt               # Crawler directives and bot exclusion rules
+│   └── sitemap.xml              # Search engine index manifest
 ├── src/
 │   ├── components/
-│   │   ├── ComparisonViewer.tsx # Before and after view switcher
-│   │   ├── FaqSection.tsx       # Student questions and answers accordion
+│   │   ├── ComparisonViewer.tsx # Interactive before-and-after theme viewer
+│   │   ├── FaqSection.tsx       # Student FAQ accordion component
 │   │   ├── FeatureGrid.tsx      # Feature highlights and architectural pillars
-│   │   ├── Footer.tsx           # Multi-column footer with project links
+│   │   ├── Footer.tsx           # Multi-column navigation links and credits
 │   │   ├── Icons.tsx            # SVG browser icons and branding vectors
-│   │   ├── InstallSteps.tsx     # 4-step visual setup walkthrough and Tampermonkey guide
+│   │   ├── InstallSteps.tsx     # 4-step onboarding walkthrough and userscript setup
 │   │   ├── Navbar.tsx           # Adaptive navigation bar with theme toggle
-│   │   └── SpecMatrix.tsx       # Technical capability comparison table
+│   │   └── SpecMatrix.tsx       # Capability comparison matrix
 │   ├── App.tsx                  # Root application layout and theme provider
-│   ├── index.css                # Global styles, font declarations, and Tailwind directives
+│   ├── index.css                # Global styles, Tailwind directives, and font declarations
 │   └── main.tsx                 # React DOM mount point
-├── index.html                   # HTML entry point with SEO metadata and JSON-LD
-├── tailwind.config.js           # Design tokens, palette, and typography rules
-├── tsconfig.json                # Strict TypeScript configuration
-├── vite.config.ts               # Vite bundler configuration
+├── index.html                   # HTML entry point with JSON-LD schema
 ├── package.json                 # Project dependencies, scripts, and metadata
+├── tailwind.config.js           # Design tokens, color palette, and typography rules
+├── tsconfig.json                # Strict TypeScript compiler configuration
+├── vite.config.ts               # Vite bundler and chunk splitting configuration
 ├── LICENSE                      # MIT License
 └── README.md                    # Project documentation
 ```
 
 ---
 
-## Edge Security and Hardening
-
-The web platform includes an edge middleware layer in `functions/_middleware.ts` running on Cloudflare Pages:
-
-- **Bounded Edge Rate Limiting**: Tracks client IPs within a bounded sliding window (120 req/min), preventing memory exhaustion attacks while blocking malicious flood traffic.
-- **Scanner Penalty Lockout**: Offensive vulnerability probes and recon fuzzers incur a temporary penalty ban.
-- **Multi-Pass URI Decoding**: Protects against double-encoded directory traversal payloads (`..%252f`) and prevents unhandled `URIError` exceptions.
-- **HTTP Method Whitelist**: Restricts incoming requests to safe read-only methods (`GET`, `HEAD`, `OPTIONS`), rejecting `POST`, `PUT`, `DELETE`, and `CONNECT` attempts.
-- **Offensive Scanner Blocking**: Filters automated scanners (Nikto, SQLMap, WPScan, DirBuster, Acunetix, Nessus) at the edge.
-- **Strict Route Allowlist**: Drops unknown path fuzzing and brute-force directory discovery before reaching static storage.
-- **Defense-in-Depth Headers**: Enforces Content Security Policy (`default-src 'self'`), `Strict-Transport-Security`, `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, and `Cross-Origin-Opener-Policy: same-origin`.
-
----
-
-## Local Development
+## Installation
 
 ### Prerequisites
 
-- **Node.js**: v18.0.0 or higher (v20+ recommended)
-- **npm** or **pnpm** or **yarn**
+- Node.js: `v18.0.0` or higher (`v20+` recommended)
+- Package Manager: `npm` (bundled with Node.js) or `pnpm`
 
-### 1. Clone the repository
+### Setup Steps
 
-```bash
-git clone https://github.com/dulithdivisekara/sliit-courseweb-cleaner-web.git
-cd sliit-courseweb-cleaner-web
-```
+1. Clone the repository:
 
-### 2. Install dependencies
+   ```bash
+   git clone https://github.com/dulithdivisekara/sliit-courseweb-cleaner-web.git
+   cd sliit-courseweb-cleaner-web
+   ```
 
-```bash
-npm install
-```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### 3. Start development server
+---
+
+## Usage
+
+### Development Server
+
+Run the local development server with Hot Module Replacement (HMR):
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the application with Hot Module Replacement (HMR).
+The application will be accessible at `http://localhost:5173`.
 
-### 4. Build for production
+### Production Build
+
+Compile TypeScript and generate the production distribution bundle:
 
 ```bash
 npm run build
 ```
 
-Compiles TypeScript and generates the production distribution bundle in `dist/`.
+Production assets are emitted to the `dist/` directory.
 
-### 5. Format codebase
+### Preview Production Build
+
+Preview the generated production build locally:
 
 ```bash
+npm run preview
+```
+
+### Code Formatting
+
+Enforce Prettier formatting standards across the codebase:
+
+```bash
+# Verify formatting without modification
+npm run format:check
+
+# Auto-format all project files
 npm run format
 ```
 
 ---
 
-## Deployment and Custom Domain
+## Verification Tests
 
-### Custom Domain
+Run the verification suite to ensure code quality and build integrity:
 
-The site is hosted at:
+```bash
+# Execute strict TypeScript type checking and bundle generation
+npm run build
+
+# Verify code formatting conformance
+npm run format:check
+```
+
+Continuous integration runs automatically on every pull request and push to the `main` branch via GitHub Actions (`.github/workflows/ci.yml`).
+
+---
+
+## Edge Security & Hardening
+
+The web platform executes defensive edge logic in `functions/_middleware.ts` before requests reach static assets:
+
+- **Bounded Edge Rate Limiting**: Tracks client requests within a 60-second sliding window (600 req/min per IP) with automatic LRU pruning capped at 5,000 tracked IPs to eliminate state-exhaustion memory vulnerabilities.
+- **Scanner Penalty Lockout**: Offensive probing patterns and automated recon tools (Nikto, SQLMap, WPScan, DirBuster, Acunetix, Nessus) trigger immediate temporary lockout bans.
+- **Multi-Pass URI Decoding**: Protects against double-encoded directory traversal payloads (`..%252f`) and prevents unhandled `URIError` runtime exceptions.
+- **HTTP Method Restriction**: Rejects modifying methods (`POST`, `PUT`, `DELETE`, `CONNECT`), permitting only read-only requests (`GET`, `HEAD`, `OPTIONS`).
+- **Strict Route Enforcement**: Validates URL paths against an explicit allowlist, dropping unauthorized fuzzing attempts at the edge.
+- **Defense-in-Depth Headers**: Injects hardened HTTP headers across all responses:
+  - `Content-Security-Policy`: Restricts script and resource execution origins.
+  - `Strict-Transport-Security`: Mandates HTTPS transport with 1-year HSTS max-age.
+  - `X-Content-Type-Options: nosniff`: Prevents MIME-sniffing exploits.
+  - `X-Frame-Options: DENY`: Mitigates clickjacking attacks.
+  - `Cross-Origin-Opener-Policy: same-origin`: Isolates the browsing context.
+
+---
+
+## Session Logging & Security
+
+- **Edge Execution Metrics**: Edge request execution, status codes, and security violation events are tracked via Cloudflare Pages Function metrics and live tail inspection:
+  ```bash
+  npx wrangler pages deployment tail
+  ```
+- **Credential Protection**: Sensitive configuration files, local environment definitions (`.env`, `.wrangler`, `*.local`), and runtime logs (`*.log`) are explicitly excluded from version control via `.gitignore`.
+- **Zero Data Collection**: The web application does not collect, track, or persist student credentials, LMS session tokens, or personal identifiers.
+
+---
+
+## Deployment
+
+### Edge Platform Hosting
+
+The site is hosted globally on Cloudflare Pages at:
 
 **`https://courseweb-cleaner.dulith.me`**
 
 ### DNS Configuration
 
-To route your custom domain to Cloudflare Pages:
+To configure a custom domain on Cloudflare Pages, establish the following DNS record:
 
-| Type      | Name                | Content                                 | Proxy Status           |
-| :-------- | :------------------ | :-------------------------------------- | :--------------------- |
-| **CNAME** | `courseweb-cleaner` | `sliit-courseweb-cleaner-web.pages.dev` | Proxied (Orange Cloud) |
+| Record Type | Name                | Target                                  | Proxy Status           |
+| :---------- | :------------------ | :-------------------------------------- | :--------------------- |
+| **CNAME**   | `courseweb-cleaner` | `sliit-courseweb-cleaner-web.pages.dev` | Proxied (Orange Cloud) |
 
 ### Automated Continuous Deployment
 
-Every push to the `main` branch of `dulithdivisekara/sliit-courseweb-cleaner-web` triggers an automated Cloudflare Pages build and edge release:
+Every push to the `main` branch triggers an automated build and edge deployment:
 
-- **Framework**: Vite / React
+- **Framework**: Vite / React 19
 - **Build Command**: `npm run build`
 - **Output Directory**: `dist`
 - **Node.js Version**: `20`
 
-### GitHub CLI Publishing
+### Manual Deployment via Wrangler
 
 ```bash
-# Push latest changes to main branch
-git push origin main
-
-# Update repository metadata and homepage URL
-gh repo edit dulithdivisekara/sliit-courseweb-cleaner-web --homepage "https://courseweb-cleaner.dulith.me"
-```
-
-### Cloudflare Wrangler Deployment
-
-```bash
-# Optional manual deployment via Wrangler CLI
 npm run build
-npx wrangler pages deploy dist --project-name=sliit-courseweb-cleaner-web
+npm run deploy
 ```
 
 ---
 
-## Related Projects
+## Browser Extension Distribution
 
-- **[SLIIT CourseWeb Cleaner Extension](https://github.com/dulithdivisekara/sliit-courseweb-cleaner)**: Core browser extension repository (Manifest V3, content scripts, filter algorithms, options page).
-- **[Official SLIIT CourseWeb](https://courseweb.sliit.lk)**: Official Moodle Learning Management System for SLIIT.
-
----
-
-## Contributing
-
-Contributions, feedback, and issue reports are welcome:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -m 'feat: add improvement'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Open a Pull Request
+| Store / Platform            | Target Browsers                               | Package Link                                                                                                              |
+| :-------------------------- | :-------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ |
+| **Chrome Web Store**        | Google Chrome, Brave, Arc, Opera, Vivaldi     | [Chrome Extension](https://chromewebstore.google.com/detail/sliit-courseweb-cleaner/lnoadlfhebmkhmbfmehdgoffjllgadjm)     |
+| **Microsoft Edge Add-ons**  | Microsoft Edge                                | [Edge Add-on](https://microsoftedge.microsoft.com/addons/detail/sliit-courseweb-cleaner/gmlodfhgiopjgamoijjffcmgfenkkkhe) |
+| **Firefox Browser Add-ons** | Mozilla Firefox, LibreWolf, Floorp            | [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/sliit-courseweb-cleaner/)                                 |
+| **Tampermonkey Userscript** | Safari (via Userscripts), Orion, Kiwi Browser | [Userscript Guide](https://github.com/dulithdivisekara/sliit-courseweb-cleaner/blob/main/USERSCRIPT_INSTALL.md)           |
 
 ---
 
@@ -294,6 +305,6 @@ Contributions, feedback, and issue reports are welcome:
 
 This project is open-source software licensed under the [MIT License](LICENSE).
 
-<div align="center">
-  <sub>Authored by <a href="https://dulith.me"><strong>Dulith Divisekara</strong></a>. Independent student utility not affiliated with or endorsed by SLIIT.</sub>
-</div>
+<p align="center">
+  <sub>Authored by <a href="https://dulith.me">Dulith Divisekara</a>. Independent student utility not affiliated with or endorsed by SLIIT.</sub>
+</p>
