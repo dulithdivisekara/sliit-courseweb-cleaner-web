@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://courseweb-cleaner.dulith.me" target="_blank" rel="noopener noreferrer">
+  <a href="https://sliit-courseweb-cleaner.dulith.me" target="_blank" rel="noopener noreferrer">
     <img src="public/favicon-512x512.png" width="96" alt="SLIIT CourseWeb Cleaner Logo" />
   </a>
 </p>
@@ -34,9 +34,9 @@
 
 ## Overview
 
-SLIIT CourseWeb Cleaner Web is the official showcase portal and distribution website for the [SLIIT CourseWeb Cleaner](https://github.com/dulithdivisekara/sliit-courseweb-cleaner) browser extension. Designed for students at the Sri Lanka Institute of Information Technology (SLIIT), the web application demonstrates how the companion extension streamlines Moodle by eliminating visual noise, introducing native dark mode, preserving academic notices, and customizing course navigation by campus and academic intake.
+SLIIT CourseWeb Cleaner Web is the official showcase portal and distribution website for the [SLIIT CourseWeb Cleaner](https://github.com/dulithdivisekara/sliit-courseweb-cleaner) browser extension (v7.2.0). Designed for students at the Sri Lanka Institute of Information Technology (SLIIT), the web application demonstrates how the companion extension streamlines Moodle by eliminating visual clutter, introducing zero-latency dark mode, preserving academic notices, and customizing course navigation across 6 campuses and multiple academic intakes.
 
-The web platform serves as an interactive product tour, cross-browser installation router, and technical documentation hub. Visitors can preview side-by-side interface transformations, verify security guardrails, and receive direct browser-specific routing for Google Chrome, Brave, Arc, Microsoft Edge, and Mozilla Firefox.
+The web platform serves as an interactive product tour, cross-browser installation router, and technical documentation hub. Visitors can preview side-by-side interface transformations, inspect the slide-in side panel drawer interface, verify security guardrails, and receive direct browser-specific routing for Google Chrome, Brave, Arc, Microsoft Edge, and Mozilla Firefox.
 
 Deployed on Cloudflare Pages, the platform incorporates edge middleware functions that deliver sub-50ms response times, automated DDoS mitigation, multi-pass URI decoding, and strict HTTP security headers.
 
@@ -262,15 +262,15 @@ The web platform executes defensive edge logic in `functions/_middleware.ts` bef
 
 The site is hosted globally on Cloudflare Pages at:
 
-**`https://courseweb-cleaner.dulith.me`**
+**`https://sliit-courseweb-cleaner.dulith.me`**
 
 ### DNS Configuration
 
 To configure a custom domain on Cloudflare Pages, establish the following DNS record:
 
-| Record Type | Name                | Target                                  | Proxy Status           |
-| :---------- | :------------------ | :-------------------------------------- | :--------------------- |
-| **CNAME**   | `courseweb-cleaner` | `sliit-courseweb-cleaner-web.pages.dev` | Proxied (Orange Cloud) |
+| Record Type | Name                      | Target                                  | Proxy Status           |
+| :---------- | :------------------------ | :-------------------------------------- | :--------------------- |
+| **CNAME**   | `sliit-courseweb-cleaner` | `sliit-courseweb-cleaner-web.pages.dev` | Proxied (Orange Cloud) |
 
 ### Automated Continuous Deployment
 

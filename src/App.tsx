@@ -188,8 +188,23 @@ export default function App() {
       <main className="max-w-[1240px] mx-auto px-4 sm:px-6">
         {/* Hero Section */}
         <section className="pt-8 sm:pt-16 md:pt-20 pb-10 sm:pb-16 text-center">
+          {/* Version Announcement Pill */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-100/80 dark:bg-navy-900/60 border border-navy-200 dark:border-gold-500/30 text-xs font-medium text-navy-900 dark:text-gold-300 mb-4 sm:mb-6 shadow-xs backdrop-blur-sm">
+            <span className="px-1.5 py-0.5 rounded-full bg-navy-700 dark:bg-gold-500 text-[10px] font-bold text-white dark:text-navy-950 uppercase tracking-wider">
+              v7.2.0
+            </span>
+            <span>Side-Panel Drawer &amp; Anti-Flash Dark Mode</span>
+            <a
+              href="#features"
+              className="inline-flex items-center gap-1 font-semibold text-navy-700 dark:text-gold-400 hover:underline ml-1"
+            >
+              <span>Explore</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+
           {/* Top Context Subhead */}
-          <span className="inline-block text-xs font-bold uppercase tracking-widest text-navy-700 dark:text-gold-400 mb-2 sm:mb-3">
+          <span className="block text-xs font-bold uppercase tracking-widest text-navy-700 dark:text-gold-400 mb-2 sm:mb-3">
             Install in Under 30 Seconds
           </span>
 
@@ -318,8 +333,8 @@ export default function App() {
                   sizes="(max-width: 1024px) 100vw, 960px"
                   alt={
                     darkMode
-                      ? "SLIIT Courseweb Cleaner active in Dark Theme with Ghost Mode and extension popup"
-                      : "SLIIT Courseweb Cleaner active in Light Theme with Ghost Mode and extension popup"
+                      ? "SLIIT Courseweb Cleaner v7.2.0 active in Dark Theme with slide-in side panel drawer"
+                      : "SLIIT Courseweb Cleaner v7.2.0 active in Light Theme with slide-in side panel drawer"
                   }
                   width={960}
                   height={540}

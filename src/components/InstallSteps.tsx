@@ -22,7 +22,7 @@ export function InstallSteps({ darkMode }: InstallStepsProps) {
     {
       step: "02",
       title: "Open CourseWeb",
-      desc: "Log into courseweb.sliit.lk normally. The clean initial setup wizard welcomes you automatically.",
+      desc: "Log into courseweb.sliit.lk. The automated initial setup wizard v7.2.0 welcomes you automatically.",
       image: darkMode
         ? "/assets/theme/wizard-dark.webp"
         : "/assets/theme/wizard-light.webp",
@@ -31,7 +31,7 @@ export function InstallSteps({ darkMode }: InstallStepsProps) {
     {
       step: "03",
       title: "Select Campus & Batch",
-      desc: "Choose your registered campus (Malabe, Metro, Kandy, etc.) and batch. Preferences are saved locally.",
+      desc: "Choose your registered campus and batch. Preferences are saved locally in the sleek slide-in side panel.",
       image: darkMode
         ? "/assets/theme/config-dark.webp"
         : "/assets/theme/config-light.webp",
@@ -40,7 +40,7 @@ export function InstallSteps({ darkMode }: InstallStepsProps) {
     {
       step: "04",
       title: "Manage Anytime",
-      desc: "Switch themes, toggle Ghost Mode, or adjust batch filters using the toolbar popup or floating gear icon.",
+      desc: "Switch themes, toggle Ghost Mode, or fine-tune batch filters using the toolbar popup or ergonomic bottom-right trigger.",
       image: darkMode
         ? "/assets/theme/popup-dark.webp"
         : "/assets/theme/popup-light.webp",

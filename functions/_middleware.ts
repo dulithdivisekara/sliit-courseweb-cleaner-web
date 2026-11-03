@@ -263,10 +263,15 @@ export async function onRequest(context: EventContext): Promise<Response> {
     );
   }
 
-  // Canonical Domain Redirect: Redirect all *.pages.dev requests to primary custom domain
-  if (url.hostname.endsWith(".pages.dev")) {
+  // Canonical Domain Redirect: Redirect all *.pages.dev, legacy domain (courseweb-cleaner.dulith.me), or typo domains to primary custom domain
+  const CANONICAL_HOST = "sliit-courseweb-cleaner.dulith.me";
+  if (
+    url.hostname.endsWith(".pages.dev") ||
+    url.hostname === "courseweb-cleaner.dulith.me" ||
+    url.hostname === "sllit-courseweb-cleaner.dulith.me"
+  ) {
     const targetUrl = new URL(request.url);
-    targetUrl.hostname = "courseweb-cleaner.dulith.me";
+    targetUrl.hostname = CANONICAL_HOST;
     targetUrl.protocol = "https:";
     targetUrl.port = "";
     return new Response(null, {

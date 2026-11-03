@@ -14,65 +14,65 @@ interface FeatureGridProps {
 export function FeatureGrid({ darkMode }: FeatureGridProps) {
   const cards = [
     {
-      title: "Smart First-Run Wizard",
-      desc: "Automatically prompts you to pick your campus and batch on first login. Sets up your custom filters in under 10 seconds.",
+      title: "Smart Setup Wizard",
+      desc: "Automatically prompts you to pick your campus and batch on first login. Sets up your custom filters in under 10 seconds with Version 7.2.0 intelligence.",
       lightImage: "/assets/theme/wizard-light.webp",
       darkImage: "/assets/theme/wizard-dark.webp",
-      tag: "Zero Configuration",
+      tag: "Zero Setup",
     },
     {
-      title: "Dedicated Preferences Panel",
-      desc: "Customize custom whitelist keywords, toggle Ghost Mode, or fine-tune module visibility directly inside your CourseWeb interface.",
+      title: "Side-Panel Drawer Interface",
+      desc: "Replaces intrusive center popups with a smooth, slide-in side panel drawer anchored right above the back-to-top button. Configure preferences without obscuring course materials.",
       lightImage: "/assets/theme/config-light.webp",
       darkImage: "/assets/theme/config-dark.webp",
-      tag: "Full Control",
+      tag: "v7.2.0 New",
     },
     {
-      title: "Floating Toolbar Control",
-      desc: "A neat floating icon sits on your screen alongside Ghost Mode filtered items, letting you open filter settings anytime.",
+      title: "Ergonomic Trigger & Ghost Mode",
+      desc: "Floating trigger button moved to the bottom-right to permanently prevent collisions with CourseWeb drawers. Ghost Mode fades unassigned modules to 25% opacity.",
       lightImage: "/assets/theme/floating-gear-light.webp",
       darkImage: "/assets/theme/floating-gear-dark.webp",
-      tag: "Instant Access",
+      tag: "Ergonomic",
     },
     {
-      title: "Multi-Browser Management",
-      desc: "Native toolbar action popup lets you quickly toggle filtering on and off, switch themes, or update your campus and batch.",
+      title: "Quick Action Toolbar Popup",
+      desc: "Updated browser action menu lets you toggle dark mode, switch campus/batch profiles, adjust Ghost Mode, or trigger the side panel directly from your toolbar.",
       lightImage: "/assets/theme/popup-light.webp",
       darkImage: "/assets/theme/popup-dark.webp",
-      tag: "Cross-Platform",
+      tag: "Instant Control",
     },
   ];
 
   const pillarPoints = [
+    {
+      icon: Zap,
+      title: "Zero-Latency Anti-Flash Preloader",
+      desc: "Eliminates the jarring white flash (FOUC) when switching Courseweb pages in dark mode through synchronous theme state pre-caching.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Enhanced Notice & Contrast Protection",
+      desc: "High-contrast overrides for yellow notice containers ensure urgent exam alerts, postponement notices, and lab reschedules remain razor sharp.",
+    },
     {
       icon: Sparkles,
       title: "Campus and Batch Targeting",
       desc: "Isolates announcements strictly intended for your physical center (Malabe, Metro, Kandy, Kurunegala, Matara, or Jaffna).",
     },
     {
-      icon: ShieldCheck,
-      title: "Notice Protector",
-      desc: "Protects critical exam schedules, assignment deadline updates, and university-wide alerts from being accidentally hidden.",
-    },
-    {
       icon: Sliders,
-      title: "Custom Whitelists & Blacklists",
-      desc: "Need to follow an elective or special module? Add custom keyword rules to tailor your dashboard precisely to your curriculum.",
-    },
-    {
-      icon: RefreshCw,
-      title: "Cloud-Synced Rules",
-      desc: "Silently synchronizes with updated faculty naming codes and new semester module conventions in the background.",
+      title: "Ghost Mode & Custom Whitelists",
+      desc: "Fade unassigned modules to 25% opacity or add custom keyword rules to tailor your dashboard precisely to your curriculum.",
     },
     {
       icon: Lock,
-      title: "100% Client-Side Privacy",
-      desc: "Runs completely offline in your local browser sandbox. Never reads student passwords, personal tokens, or academic grades.",
+      title: "100% Client-Side Privacy & CSP",
+      desc: "Runs completely offline in your local browser sandbox with strict CSP compliance. Never reads passwords, student IDs, or grades.",
     },
     {
-      icon: Zap,
-      title: "Ultra Lightweight",
-      desc: "Zero bloated frameworks injected into CourseWeb. Minimal memory footprint ensures snappy page load times even on slow campus Wi-Fi.",
+      icon: RefreshCw,
+      title: "Screen-Blended Branding & Sync",
+      desc: "Inverts CourseWeb header logos with screen blend mode for dark bars and synchronizes your preferences seamlessly across devices.",
     },
   ];
 
