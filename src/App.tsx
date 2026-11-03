@@ -307,13 +307,13 @@ export default function App() {
                 <img
                   src={
                     darkMode
-                      ? "/assets/theme/hero-dark-960.webp"
-                      : "/assets/theme/hero-light-960.webp"
+                      ? "/assets/theme/hero-dark-960.webp?v=stable-7.1"
+                      : "/assets/theme/hero-light-960.webp?v=stable-7.1"
                   }
                   srcSet={
                     darkMode
-                      ? "/assets/theme/hero-dark-960.webp 960w, /assets/theme/hero-dark.webp 1465w"
-                      : "/assets/theme/hero-light-960.webp 960w, /assets/theme/hero-light.webp 1465w"
+                      ? "/assets/theme/hero-dark-960.webp?v=stable-7.1 960w, /assets/theme/hero-dark.webp?v=stable-7.1 1465w"
+                      : "/assets/theme/hero-light-960.webp?v=stable-7.1 960w, /assets/theme/hero-light.webp?v=stable-7.1 1465w"
                   }
                   sizes="(max-width: 1024px) 100vw, 960px"
                   alt={
@@ -416,7 +416,7 @@ export default function App() {
               <div className="flex items-center gap-3 pt-1">
                 <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-navy-900/10 dark:border-white/10 shrink-0">
                   <img
-                    src="/assets/theme/testimonial-kesaru.webp"
+                    src="/assets/theme/testimonial-kesaru.webp?v=stable-7.1"
                     alt="Kesaru S., Undergraduate, SLIIT"
                     width={48}
                     height={48}

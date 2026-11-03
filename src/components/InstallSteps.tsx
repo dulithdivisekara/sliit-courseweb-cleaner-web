@@ -16,7 +16,7 @@ export function InstallSteps({ darkMode }: InstallStepsProps) {
       step: "01",
       title: "Add to Browser",
       desc: "Install the verified extension directly from the Chrome Web Store, Edge Add-ons, or Firefox AMO.",
-      image: "/assets/theme/step1-install.webp",
+      image: "/assets/theme/step1-install.webp?v=stable-7.1",
       alt: "Install extension from web store",
     },
     {
@@ -24,8 +24,8 @@ export function InstallSteps({ darkMode }: InstallStepsProps) {
       title: "Open CourseWeb",
       desc: "Log into courseweb.sliit.lk normally. The clean initial setup wizard welcomes you automatically.",
       image: darkMode
-        ? "/assets/theme/wizard-dark.webp"
-        : "/assets/theme/wizard-light.webp",
+        ? "/assets/theme/wizard-dark.webp?v=stable-7.1"
+        : "/assets/theme/wizard-light.webp?v=stable-7.1",
       alt: "Open CourseWeb and trigger setup wizard",
     },
     {
@@ -33,8 +33,8 @@ export function InstallSteps({ darkMode }: InstallStepsProps) {
       title: "Select Campus & Batch",
       desc: "Choose your registered campus (Malabe, Metro, Kandy, etc.) and batch. Preferences are saved locally.",
       image: darkMode
-        ? "/assets/theme/config-dark.webp"
-        : "/assets/theme/config-light.webp",
+        ? "/assets/theme/config-dark.webp?v=stable-7.1"
+        : "/assets/theme/config-light.webp?v=stable-7.1",
       alt: "Configure campus and batch preferences",
     },
     {
@@ -42,8 +42,8 @@ export function InstallSteps({ darkMode }: InstallStepsProps) {
       title: "Manage Anytime",
       desc: "Switch themes, toggle Ghost Mode, or adjust batch filters using the toolbar popup or floating gear icon.",
       image: darkMode
-        ? "/assets/theme/popup-dark.webp"
-        : "/assets/theme/popup-light.webp",
+        ? "/assets/theme/popup-dark.webp?v=stable-7.1"
+        : "/assets/theme/popup-light.webp?v=stable-7.1",
       alt: "Manage extension using toolbar popup or floating settings trigger",
     },
   ];

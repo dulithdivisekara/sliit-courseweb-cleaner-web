@@ -171,13 +171,13 @@ export function ComparisonViewer({ darkMode }: ComparisonViewerProps) {
             <img
               src={
                 darkMode
-                  ? "/assets/theme/after-dark-960.webp"
-                  : "/assets/theme/after-light-960.webp"
+                  ? "/assets/theme/after-dark-960.webp?v=stable-7.1"
+                  : "/assets/theme/after-light-960.webp?v=stable-7.1"
               }
               srcSet={
                 darkMode
-                  ? "/assets/theme/after-dark-960.webp 960w, /assets/theme/after-dark.webp 1465w"
-                  : "/assets/theme/after-light-960.webp 960w, /assets/theme/after-light.webp 1465w"
+                  ? "/assets/theme/after-dark-960.webp?v=stable-7.1 960w, /assets/theme/after-dark.webp?v=stable-7.1 1465w"
+                  : "/assets/theme/after-light-960.webp?v=stable-7.1 960w, /assets/theme/after-light.webp?v=stable-7.1 1465w"
               }
               sizes="(max-width: 1024px) 100vw, 960px"
               alt={`SLIIT CourseWeb after clean filtering in ${darkMode ? "dark" : "light"} mode`}
@@ -194,8 +194,8 @@ export function ComparisonViewer({ darkMode }: ComparisonViewerProps) {
 
             {/* Before Image */}
             <img
-              src="/assets/theme/before-960.webp"
-              srcSet="/assets/theme/before-960.webp 960w, /assets/theme/before.webp 1190w"
+              src="/assets/theme/before-960.webp?v=stable-7.1"
+              srcSet="/assets/theme/before-960.webp?v=stable-7.1 960w, /assets/theme/before.webp?v=stable-7.1 1190w"
               sizes="(max-width: 1024px) 100vw, 960px"
               alt="SLIIT CourseWeb before clean filtering"
               width={960}
