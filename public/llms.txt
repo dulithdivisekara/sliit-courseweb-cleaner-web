@@ -8,13 +8,9 @@ SLIIT Courseweb Cleaner is a free, open-source, client-side browser utility buil
 
 - Campus Targeting: Automatically filters noticeboards and activity submission links intended for other campuses (supports Malabe, Metro, Kandy, Kurunegala, Matara, and Jaffna).
 - Batch and Group Isolation: Isolates weekday and weekend batch announcements so students only view their relevant groups.
-- Side-Panel Drawer Interface: Smooth slide-in preferences drawer anchored above Moodle's back-to-top button for frictionless configuration.
-- Zero-Latency Anti-Flash Preloader: Eliminates white flash (FOUC) when navigating between Courseweb pages in dark mode with synchronous theme caching.
-- Enhanced Notice Contrast: High-contrast yellow notice containers ensure urgent exam alerts and lab reschedules remain legible in dark mode.
-- Ghost Mode (Peek Mode): Fades unassigned modules to 25% opacity so students can still inspect full course offerings at a glance.
 - Notice Protector: Built-in safety algorithm guarantees critical university notices, exam timetables, postponement notices, and lab reschedule alerts remain visible.
-- Past Semester Cleaner: Hides completed previous semester courses from the dashboard view.
-- Eye-Friendly Dark Mode: High-contrast dark theme powered by Dark Reader with screen-blended logo and CSP compliance.
+- Past Semester Cleaner: Hides 40+ completed previous semester courses from the dashboard view.
+- Eye-Friendly Dark Mode: High-contrast dark theme powered by an embedded Dark Reader engine for late-night study sessions.
 - 100% Client-Side Privacy: Operates entirely offline inside the browser sandbox with zero tracking, zero external telemetry, and zero credentials collection.
 
 ## Installation Options

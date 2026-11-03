@@ -174,22 +174,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFD] dark:bg-[#0D131A] text-neutral-900 dark:text-neutral-100 selection:bg-gold-500/25 selection:text-navy-950 dark:selection:bg-gold-400/30 dark:selection:text-gold-100 font-sans relative theme-surface-transition">
-      {/* Work-in-Progress / Under Development Global Banner */}
-      <div className="bg-navy-950 text-neutral-200 border-b border-navy-800 text-xs py-2 px-4 text-center relative z-50">
-        <div className="max-w-[1240px] mx-auto flex items-center justify-center gap-2 flex-wrap">
-          <span className="px-2 py-0.5 rounded-full bg-gold-500 text-navy-950 font-bold text-[10px] uppercase tracking-wider">
-            In Development
-          </span>
-          <span className="font-medium text-neutral-200">
-            Version 7.2.0 is currently under active development.
-          </span>
-          <span className="text-neutral-500 hidden sm:inline">&bull;</span>
-          <span className="text-neutral-400">
-            Displaying the stable production showcase below.
-          </span>
-        </div>
-      </div>
-
       {/* Top Navigation */}
       <Navbar
         currentStore={currentStore}
