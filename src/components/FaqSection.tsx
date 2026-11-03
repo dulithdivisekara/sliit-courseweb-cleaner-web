@@ -19,11 +19,11 @@ export function FaqSection() {
     },
     {
       q: "How do I switch batches or semesters when starting a new academic year?",
-      a: "Whenever your semester changes, click the floating trigger button at the bottom-right of CourseWeb or use the browser extension toolbar popup. This slides open the v7.2.0 side-panel drawer where you can change your campus, switch batches, adjust Ghost Mode, or manage keyword filters with instant auto-save.",
+      a: "Whenever your semester changes, click the discreet floating settings gear icon on CourseWeb. You can choose your new batch, update your specialization, or define custom keyword whitelists. The settings take effect immediately.",
     },
     {
       q: "How does the Dark Mode theme work?",
-      a: "Dark Mode uses an embedded Dark Reader rendering engine paired with v7.2.0's zero-latency anti-flash preloader, eliminating blinding white flashes (FOUC) between page navigations. It also features high-contrast notice container overrides and screen blend logo rendering, providing an eye-friendly experience without breaking Moodle CSP policies or washing out course diagrams.",
+      a: "The dark mode uses an embedded Dark Reader rendering engine optimized specifically for Moodle. It produces high-contrast, eye-friendly dark styling across your dashboard, lecture notes, and assignment submission portals without washing out diagrams or slide graphics.",
     },
     {
       q: "Is this utility officially affiliated with SLIIT?",

@@ -174,6 +174,22 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFD] dark:bg-[#0D131A] text-neutral-900 dark:text-neutral-100 selection:bg-gold-500/25 selection:text-navy-950 dark:selection:bg-gold-400/30 dark:selection:text-gold-100 font-sans relative theme-surface-transition">
+      {/* Work-in-Progress / Under Development Global Banner */}
+      <div className="bg-navy-950 text-neutral-200 border-b border-navy-800 text-xs py-2 px-4 text-center relative z-50">
+        <div className="max-w-[1240px] mx-auto flex items-center justify-center gap-2 flex-wrap">
+          <span className="px-2 py-0.5 rounded-full bg-gold-500 text-navy-950 font-bold text-[10px] uppercase tracking-wider">
+            In Development
+          </span>
+          <span className="font-medium text-neutral-200">
+            Version 7.2.0 is currently under active development.
+          </span>
+          <span className="text-neutral-500 hidden sm:inline">&bull;</span>
+          <span className="text-neutral-400">
+            Displaying the stable production showcase below.
+          </span>
+        </div>
+      </div>
+
       {/* Top Navigation */}
       <Navbar
         currentStore={currentStore}
@@ -188,23 +204,8 @@ export default function App() {
       <main className="max-w-[1240px] mx-auto px-4 sm:px-6">
         {/* Hero Section */}
         <section className="pt-8 sm:pt-16 md:pt-20 pb-10 sm:pb-16 text-center">
-          {/* Version Announcement Pill */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-100/80 dark:bg-navy-900/60 border border-navy-200 dark:border-gold-500/30 text-xs font-medium text-navy-900 dark:text-gold-300 mb-4 sm:mb-6 shadow-xs backdrop-blur-sm">
-            <span className="px-1.5 py-0.5 rounded-full bg-navy-700 dark:bg-gold-500 text-[10px] font-bold text-white dark:text-navy-950 uppercase tracking-wider">
-              v7.2.0
-            </span>
-            <span>Side-Panel Drawer &amp; Anti-Flash Dark Mode</span>
-            <a
-              href="#features"
-              className="inline-flex items-center gap-1 font-semibold text-navy-700 dark:text-gold-400 hover:underline ml-1"
-            >
-              <span>Explore</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
-          </div>
-
           {/* Top Context Subhead */}
-          <span className="block text-xs font-bold uppercase tracking-widest text-navy-700 dark:text-gold-400 mb-2 sm:mb-3">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-navy-700 dark:text-gold-400 mb-2 sm:mb-3">
             Install in Under 30 Seconds
           </span>
 
@@ -333,8 +334,8 @@ export default function App() {
                   sizes="(max-width: 1024px) 100vw, 960px"
                   alt={
                     darkMode
-                      ? "SLIIT Courseweb Cleaner v7.2.0 active in Dark Theme with slide-in side panel drawer"
-                      : "SLIIT Courseweb Cleaner v7.2.0 active in Light Theme with slide-in side panel drawer"
+                      ? "SLIIT Courseweb Cleaner active in Dark Theme with Ghost Mode and extension popup"
+                      : "SLIIT Courseweb Cleaner active in Light Theme with Ghost Mode and extension popup"
                   }
                   width={960}
                   height={540}

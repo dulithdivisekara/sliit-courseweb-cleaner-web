@@ -34,9 +34,9 @@
 
 ## Overview
 
-SLIIT CourseWeb Cleaner Web is the official showcase portal and distribution website for the [SLIIT CourseWeb Cleaner](https://github.com/dulithdivisekara/sliit-courseweb-cleaner) browser extension (v7.2.0). Designed for students at the Sri Lanka Institute of Information Technology (SLIIT), the web application demonstrates how the companion extension streamlines Moodle by eliminating visual clutter, introducing zero-latency dark mode, preserving academic notices, and customizing course navigation across 6 campuses and multiple academic intakes.
+SLIIT CourseWeb Cleaner Web is the official showcase portal and distribution website for the [SLIIT CourseWeb Cleaner](https://github.com/dulithdivisekara/sliit-courseweb-cleaner) browser extension. Designed for students at the Sri Lanka Institute of Information Technology (SLIIT), the web application demonstrates how the companion extension streamlines Moodle by eliminating visual noise, introducing native dark mode, preserving academic notices, and customizing course navigation by campus and academic intake.
 
-The web platform serves as an interactive product tour, cross-browser installation router, and technical documentation hub. Visitors can preview side-by-side interface transformations, inspect the slide-in side panel drawer interface, verify security guardrails, and receive direct browser-specific routing for Google Chrome, Brave, Arc, Microsoft Edge, and Mozilla Firefox.
+The web platform serves as an interactive product tour, cross-browser installation router, and technical documentation hub. Visitors can preview side-by-side interface transformations, verify security guardrails, and receive direct browser-specific routing for Google Chrome, Brave, Arc, Microsoft Edge, and Mozilla Firefox. (Note: The upcoming Version 7.2.0 release is currently under active development on the `feat/v7.2.0-refinement` branch).
 
 Deployed on Cloudflare Pages, the platform incorporates edge middleware functions that deliver sub-50ms response times, automated DDoS mitigation, multi-pass URI decoding, and strict HTTP security headers.
 
