@@ -30,13 +30,13 @@
   # Disable Legacy Buggy XSS Auditor
   X-XSS-Protection: 0
 
-# Showcase and theme screenshot assets (revalidated quickly to prevent stale screenshot caching)
-/assets/theme/*
-  Cache-Control: public, max-age=60, stale-while-revalidate=86400
-
 # Static asset aggressive caching with immutable fingerprinting (Vite hashed bundles)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Showcase and theme screenshot assets (revalidated quickly to prevent stale screenshot caching)
+/assets/theme/*
+  Cache-Control: public, max-age=60, stale-while-revalidate=86400
 
 # Favicon and site icon headers for search engines and browser clients
 /favicon.ico
